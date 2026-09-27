@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-
-<html class="light" lang="es"><head>
-<base target="_top"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<!DOCTYPE html><html class="light" lang="es"><head>
+<base target="_top">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 <title>Stock Digital Hospital HES - Central de Abastecimiento</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
@@ -30,10 +28,10 @@
       }
     }
   </script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
     body { font-family: 'Inter', sans-serif; }
@@ -91,7 +89,7 @@
 <span class="material-symbols-outlined text-[20px]">pin</span>
 </div>
 <!-- CONTRASEÑA ACTUAL: hes2026 -->
-<input autocomplete="current-password" class="w-full pl-10 pr-4 py-3 bg-slate-50/80 border-2 border-slate-200 rounded-xl text-center text-lg sm:text-xl font-mono tracking-[0.35em] text-slate-800 placeholder:text-slate-300 placeholder:tracking-widest focus:ring-4 focus:ring-sky-400/20 focus:border-sky-500 focus:bg-white transition-all outline-none" id="clave" onkeypress="if(event.key === 'Enter') verificarPIN()" placeholder="••••••••" type="password"/>
+<input autocomplete="current-password" class="w-full pl-10 pr-4 py-3 bg-slate-50/80 border-2 border-slate-200 rounded-xl text-center text-lg sm:text-xl font-mono tracking-[0.35em] text-slate-800 placeholder:text-slate-300 placeholder:tracking-widest focus:ring-4 focus:ring-sky-400/20 focus:border-sky-500 focus:bg-white transition-all outline-none" id="clave" onkeypress="if(event.key === 'Enter') verificarPIN()" placeholder="••••••••" type="password">
 </div>
 <button class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 active:scale-[0.98] text-white font-bold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-sky-500/25 transition-all cursor-pointer" onclick="verificarPIN()">
 <span class="material-symbols-outlined text-[20px]">lock_open</span>
@@ -221,7 +219,7 @@
 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
 <span class="material-symbols-outlined text-[18px]">search</span>
 </div>
-<input class="w-full pl-9 pr-14 py-2 bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl text-xs sm:text-sm font-medium focus:ring-2 focus:ring-sky-500 focus:border-sky-500 dark:focus:ring-sky-400 placeholder:text-slate-400 transition" id="searchInput" placeholder="Buscar por código SISMED, nombre..." type="text"/>
+<input class="w-full pl-9 pr-14 py-2 bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl text-xs sm:text-sm font-medium focus:ring-2 focus:ring-sky-500 focus:border-sky-500 dark:focus:ring-sky-400 placeholder:text-slate-400 transition" id="searchInput" placeholder="Buscar por código SISMED, nombre..." type="text">
 <div class="absolute inset-y-0 right-0 pr-2 flex items-center gap-1">
 <button class="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hidden" id="btnClearSearch" onclick="limpiarBusqueda()">
 <span class="material-symbols-outlined text-[16px]">close</span>
@@ -232,12 +230,12 @@
 <div class="flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 w-full">
 <div class="flex items-center flex-wrap gap-1.5 sm:gap-2">
 <label class="cursor-pointer select-none inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg sm:rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/70 transition text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-300">
-<input class="w-3.5 h-3.5 rounded text-sky-600 focus:ring-sky-500 dark:bg-slate-700 border-slate-300 dark:border-slate-600" id="toggleAreas" type="checkbox"/>
+<input class="w-3.5 h-3.5 rounded text-sky-600 focus:ring-sky-500 dark:bg-slate-700 border-slate-300 dark:border-slate-600" id="toggleAreas" type="checkbox">
 <span class="material-symbols-outlined text-[15px] text-slate-500">domain</span>
 <span class="">Farmacias</span>
 </label>
 <label class="cursor-pointer select-none inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg sm:rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/70 transition text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-300">
-<input class="w-3.5 h-3.5 rounded text-sky-600 focus:ring-sky-500 dark:bg-slate-700 border-slate-300 dark:border-slate-600" id="toggleStockOculto" type="checkbox"/>
+<input class="w-3.5 h-3.5 rounded text-sky-600 focus:ring-sky-500 dark:bg-slate-700 border-slate-300 dark:border-slate-600" id="toggleStockOculto" type="checkbox">
 <span class="material-symbols-outlined text-[15px] text-emerald-600 dark:text-emerald-400">stacked_line_chart</span>
 <span class="">AlmHAS / FarmHAS</span>
 </label>
@@ -273,7 +271,7 @@
 <!-- TABLA Y TARJETAS -->
 <main class="flex-1 bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col relative min-h-[380px] w-full">
 <div class="absolute inset-0 flex flex-col justify-center items-center bg-white/85 dark:bg-slate-900/90 backdrop-blur-sm z-50 transition-opacity duration-200 opacity-0 pointer-events-none hidden" id="loading">
-<svg class="ekg-loader mb-3" viewbox="0 0 100 100">
+<svg class="ekg-loader mb-3" viewBox="0 0 100 100">
 <polyline points="10,50 30,50 40,20 60,80 70,50 90,50"></polyline>
 </svg>
 <div class="text-sky-700 dark:text-sky-400 text-xs font-bold tracking-wider uppercase">Procesando Matriz Farmacológica...</div>
@@ -386,20 +384,22 @@
 <!-- MODAL 1: HISTÓRICO GENERAL DE CONSUMO -->
 <div class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex justify-center items-center p-2 sm:p-4 md:p-6 transition-all duration-200 hidden" id="modalConsumo">
 <div class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-4xl max-h-[92vh] flex flex-col border border-slate-200 dark:border-slate-800 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-<div class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+<div class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 modal-header-landscape">
 <div class="flex-1 min-w-0">
-<div class="flex items-center gap-2 mb-1 flex-wrap">
+<div class="flex items-center gap-2 mb-1 flex-wrap modal-badges-landscape">
 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 text-[11px] font-mono font-bold" id="modSubtitulo">SISMED: 00102</span>
 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-900" id="modBadgeEstado">Óptimo 3.9m</span>
 </div>
-<h2 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white leading-tight truncate" id="modTitulo">PARACETAMOL 500 MG TABLETA</h2>
+<div class="modal-row-landscape">
+<h2 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white leading-tight truncate modal-title-landscape" id="modTitulo">PARACETAMOL 500 MG TABLETA</h2>
 <div class="flex items-center gap-1.5 mt-2">
 <button class="px-2.5 py-1 rounded-lg text-[11px] font-bold transition flex items-center gap-1 bg-sky-600 text-white shadow-2xs" id="tabEvolGeneral" onclick="cambiarPestanaModal('general')">
-<span class="material-symbols-outlined text-[14px]">monitoring</span>Consumo Global
-              </button>
+<span class="material-symbols-outlined text-[14px]">monitoring</span><span class="modal-tab-btn-text">Consumo Global</span>
+</button>
 <button class="px-2.5 py-1 rounded-lg text-[11px] font-bold transition flex items-center gap-1 bg-slate-200/80 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-teal-950/50 hover:text-teal-700 dark:hover:text-teal-300" id="tabEvolFarmacias" onclick="cambiarPestanaModal('farmacias')">
-<span class="material-symbols-outlined text-[14px]">storefront</span>Farmacias
-              </button>
+<span class="material-symbols-outlined text-[14px]">storefront</span><span class="modal-tab-btn-text">Farmacias</span>
+</button>
+</div>
 </div>
 </div>
 <button class="self-end sm:self-start p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200/70 dark:hover:bg-slate-700/70 transition shrink-0" onclick="cerrarModal()">
@@ -421,7 +421,7 @@
 </div>
 <div class="flex items-center gap-1.5">
 <span class="text-[10px] sm:text-[11px] text-slate-500">Años anteriores</span>
-<input class="w-3.5 h-3.5 text-sky-600 rounded" id="toggleAnios" onchange="renderizarColumnasConsumo()" type="checkbox"/>
+<input class="w-3.5 h-3.5 text-sky-600 rounded" id="toggleAnios" onchange="renderizarColumnasConsumo()" type="checkbox">
 </div>
 </div>
 <div class="w-full h-48 sm:h-56 relative">
@@ -459,20 +459,22 @@
 <!-- MODAL 2: DETALLE Y GRÁFICO HISTÓRICO DE FARMACIAS -->
 <div class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex justify-center items-center p-2 sm:p-4 md:p-6 transition-all duration-200 hidden" id="modalFarmacias">
 <div class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl w-full max-w-4xl max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-<div class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+<div class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 modal-header-landscape">
 <div class="flex-1 min-w-0">
-<div class="flex items-center gap-2 mb-1 flex-wrap">
+<div class="flex items-center gap-2 mb-1 flex-wrap modal-badges-landscape">
 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800 text-[11px] font-mono font-bold" id="modFarmSubtitulo">SISMED: 00102</span>
 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-900" id="modFarmBadgeEstado">Óptimo 3.9m</span>
 </div>
-<h2 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white leading-tight truncate" id="modFarmTitulo">PARACETAMOL 500 MG TABLETA</h2>
+<div class="modal-row-landscape">
+<h2 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white leading-tight truncate modal-title-landscape" id="modFarmTitulo">PARACETAMOL 500 MG TABLETA</h2>
 <div class="flex items-center gap-1.5 mt-2">
 <button class="px-2.5 py-1 rounded-lg text-[11px] font-bold transition flex items-center gap-1 bg-slate-200/80 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-sky-50 hover:text-sky-700" onclick="cambiarPestanaModal('general')">
-<span class="material-symbols-outlined text-[14px]">monitoring</span>Consumo Global
-              </button>
+<span class="material-symbols-outlined text-[14px]">monitoring</span><span class="modal-tab-btn-text">Consumo Global</span>
+</button>
 <button class="px-2.5 py-1 rounded-lg text-[11px] font-bold transition flex items-center gap-1 bg-teal-600 text-white shadow-2xs" onclick="cambiarPestanaModal('farmacias')">
-<span class="material-symbols-outlined text-[14px]">storefront</span>Farmacias
-              </button>
+<span class="material-symbols-outlined text-[14px]">storefront</span><span class="modal-tab-btn-text">Farmacias</span>
+</button>
+</div>
 </div>
 </div>
 <button class="self-end sm:self-start p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition shrink-0" onclick="cerrarModalFarmacias()">
@@ -524,7 +526,21 @@
 </div>
 </div>
 </div>
+<div class="sm:hidden fixed bottom-5 right-5 z-40 flex items-center gap-2" id="contenedorBuscadorFlotante">
+<div class="hidden items-center bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-sky-300 rounded-full shadow-xl px-2 py-1 gap-1" id="barraFlotanteMovil">
+<span class="material-symbols-outlined text-[18px] text-sky-600 pl-1">search</span>
+<input class="bg-transparent text-xs py-1 px-1.5 focus:outline-none w-36 text-slate-800 dark:text-slate-100 placeholder:text-slate-400" id="inputFlotanteMovil" oninput="sincronizarBusquedaFlotante(event)" onkeydown="if(event.key === 'Enter') toggleBuscadorFlotante(false)" placeholder="Buscar..." type="text">
+<button class="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 flex items-center justify-center" onclick="limpiarBusquedaFlotante()">
+<span class="material-symbols-outlined text-[16px]">backspace</span>
+</button>
+<button class="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 flex items-center justify-center" onclick="toggleBuscadorFlotante(false)">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
 </div>
+<button aria-label="Buscar medicamentos" class="w-12 h-12 rounded-full bg-gradient-to-tr from-sky-600 to-cyan-500 text-white flex items-center justify-center shadow-lg active:scale-95 transition-all" id="btnFabLupa" onclick="toggleBuscadorFlotante()">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+</div></div>
 <script>
     let dbStockOriginal = [];
     let dbStockFiltrado = [];
@@ -563,7 +579,7 @@
       }
     }
 
-  function recargarDatos() {
+    function recargarDatos() {
   document.getElementById('loading').classList.remove('hidden', 'opacity-0', 'pointer-events-none');
   
   const API_URL = "https://script.google.com/macros/s/AKfycbxhCztK0lu3_pNN_rpYiW-bFxCEAulGGht5YAz1SW49ESEZR8jL7EEI4f4uBogK6tGseA/exec";
@@ -1239,4 +1255,55 @@
     function cerrarModalFarmacias() { document.getElementById('modalFarmacias').classList.add('hidden'); }
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { cerrarModal(); cerrarModalFarmacias(); } });
   </script>
-</body></html>
+
+
+<script>
+function toggleBuscadorFlotante(forzar) {
+  const barra = document.getElementById('barraFlotanteMovil');
+  const fab = document.getElementById('btnFabLupa');
+  const input = document.getElementById('inputFlotanteMovil');
+  const mainInput = document.getElementById('searchInput');
+  if (!barra) return;
+  
+  const abrir = (typeof forzar === 'boolean') ? forzar : barra.classList.contains('hidden');
+  if (abrir) {
+    if (mainInput && input) input.value = mainInput.value;
+    barra.classList.remove('hidden');
+    barra.classList.add('flex');
+    if (fab) fab.classList.add('hidden');
+    if (input) setTimeout(() => input.focus(), 50);
+  } else {
+    barra.classList.add('hidden');
+    barra.classList.remove('flex');
+    if (fab) fab.classList.remove('hidden');
+  }
+}
+
+function sincronizarBusquedaFlotante(e) {
+  const val = e.target.value;
+  const mainInput = document.getElementById('searchInput');
+  if (mainInput) {
+    mainInput.value = val;
+    const btnClear = document.getElementById('btnClearSearch');
+    if (btnClear) btnClear.classList.toggle('hidden', val.trim().length === 0);
+  }
+  aplicarFiltrosYBusqueda();
+}
+
+function limpiarBusquedaFlotante() {
+  const input = document.getElementById('inputFlotanteMovil');
+  if (input) input.value = '';
+  limpiarBusqueda();
+  if (input) input.focus();
+}
+
+document.addEventListener('click', (e) => {
+  const cont = document.getElementById('contenedorBuscadorFlotante');
+  if (cont && !cont.contains(e.target)) {
+    const barra = document.getElementById('barraFlotanteMovil');
+    if (barra && !barra.classList.contains('hidden')) {
+      toggleBuscadorFlotante(false);
+    }
+  }
+});
+</script></body></html>
