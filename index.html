@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html class="light" lang="es">
-
-<head>
+<!DOCTYPE html><html class="light" lang="es"><head>
   <base target="_top">
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
@@ -33,137 +30,100 @@
   </script>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    .font-mono-num {
-      font-family: 'JetBrains Mono', monospace;
-      font-feature-settings: "tnum";
-    }
-
-    /* EKG Pulse Loader */
-    .ekg-loader {
-      width: 46px;
-      height: 46px;
-      stroke: #0284c7;
-      stroke-width: 3.5;
-      fill: none;
-      stroke-dasharray: 140;
-      animation: dash 1.3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-    }
-
-    @keyframes dash {
-      to {
-        stroke-dashoffset: -280;
-      }
-    }
-
-    /* Scrollbar personalizada */
-    .custom-scrollbar::-webkit-scrollbar {
-      height: 5px;
-      width: 5px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background-color: rgba(148, 163, 184, 0.4);
-      border-radius: 9999px;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(100, 116, 139, 0.7);
-    }
-
-    .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-      background-color: rgba(71, 85, 105, 0.5);
-    }
-
-    /* Columnas fijas */
-    thead th {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      user-select: none;
-      white-space: nowrap;
-    }
-
-    .col-sticky-action {
-      position: sticky;
-      right: 0;
-      z-index: 21;
-      box-shadow: -6px 0 12px -4px rgba(0, 0, 0, 0.06);
-    }
-
-    .dark .col-sticky-action {
-      box-shadow: -6px 0 12px -4px rgba(0, 0, 0, 0.4);
-    }
-
-    .fila-activa {
-      background-color: #f0fdfa !important;
-      box-shadow: inset 4px 0 0 0 #0284c7;
-    }
-
-    .dark .fila-activa {
-      background-color: rgba(2, 132, 199, 0.16) !important;
-      box-shadow: inset 4px 0 0 0 #38bdf8;
-    }
-
-    /* Diseño de la pantalla de bloqueo */
-    #pantalla-bloqueo { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; padding: 20px; text-align: center; }
-    .card-bloqueo { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); max-width: 320px; width: 100%; border: 1px solid #e2e8f0; }
-    .icono-bloqueo { background: #0284c7; color: white; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; font-size: 24px; font-weight: bold; }
-    .card-bloqueo h2 { margin: 0 0 5px 0; color: #0f172a; font-size: 18px; }
-    .card-bloqueo p { margin: 0 0 20px 0; color: #64748b; font-size: 13px; }
-    .card-bloqueo input { width: 100%; box-sizing: border-box; padding: 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; margin-bottom: 15px; text-align: center; font-size: 16px; letter-spacing: 2px; outline: none; transition: border 0.3s; }
-    .card-bloqueo input:focus { border-color: #0284c7; }
-    .card-bloqueo button { width: 100%; background: #0284c7; color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; transition: 0.2s; }
-    .card-bloqueo button:active { background: #0369a1; }
-    #error-pin { color: #e11d48; font-size: 12px; margin-top: 10px; display: none; font-weight: bold; }
+    body { font-family: 'Inter', sans-serif; }
+    .font-mono-num { font-family: 'JetBrains Mono', monospace; font-feature-settings: "tnum"; }
+    .ekg-loader { width: 44px; height: 44px; stroke: #0284c7; stroke-width: 3.5; fill: none; stroke-dasharray: 140; animation: dash 1.3s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+    @keyframes dash { to { stroke-dashoffset: -280; } }
+    .custom-scrollbar::-webkit-scrollbar { height: 5px; width: 5px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(148, 163, 184, 0.4); border-radius: 9999px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background-color: rgba(100, 116, 139, 0.7); }
+    .dark .custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(71, 85, 105, 0.5); }
+    
+    /* Sticky Header garantizado al desplazarse hacia abajo */
+    #contenedorTabla { position: relative; max-height: 65vh; }
+    #mainTable thead th { position: sticky; top: 0; z-index: 25; user-select: none; }
+    .col-sticky-action { position: sticky; right: 0; z-index: 26; box-shadow: -6px 0 12px -4px rgba(0, 0, 0, 0.06); }
+    .dark .col-sticky-action { box-shadow: -6px 0 12px -4px rgba(0, 0, 0, 0.4); }
+    .fila-activa { background-color: #f0fdfa !important; box-shadow: inset 4px 0 0 0 #0284c7; }
+    .dark .fila-activa { background-color: rgba(2, 132, 199, 0.16) !important; box-shadow: inset 4px 0 0 0 #38bdf8; }
   </style>
 </head>
-
-<body
-  class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-sky-500 selection:text-white transition-colors duration-150 overflow-x-hidden w-full">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-sky-500 selection:text-white transition-colors duration-150 overflow-x-hidden w-full">
   
-  <!-- PANTALLA DE CONTRASEÑA -->
-  <div id="pantalla-bloqueo" class="bg-slate-50">
-    <div class="card-bloqueo">
-      <div class="icono-bloqueo">HES</div>
-      <h2>Control de Acceso</h2>
-      <p>Farmacología y Central de Abastecimiento</p>
+  <!-- 1. PANTALLA DE CONTRASEÑA: ESTILO HIGH-TECH FUTURISTA CLARO CON ÍCONO VIVO -->
+  <div id="pantalla-bloqueo" class="relative min-h-screen w-full flex items-center justify-center p-4 sm:p-6 overflow-hidden bg-gradient-to-br from-sky-50 via-white to-cyan-50/70">
+    <!-- Efectos ambientales luminosos de fondo -->
+    <div class="absolute -top-32 -left-32 w-80 h-80 bg-cyan-300/30 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-sky-400/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(#0284c7_0.6px,transparent_0.6px)] [background-size:24px_24px] opacity-10 pointer-events-none"></div>
+
+    <!-- Tarjeta Glassmorphic High-Tech en Modo Claro -->
+    <div class="relative w-full max-w-[390px] rounded-3xl backdrop-blur-xl bg-white/90 border border-sky-100 shadow-[0_20px_50px_-12px_rgba(2,132,199,0.22)] p-6 sm:p-8 flex flex-col items-center text-center">
       
-      <!-- CONTRASEÑA ACTUAL: hes2026 -->
-      <input type="password" id="clave" placeholder="Ingresa el PIN" onkeypress="if(event.key === 'Enter') verificarPIN()">
-      <button onclick="verificarPIN()">Acceder al Sistema</button>
-      
-      <div id="error-pin">PIN incorrecto. Intenta de nuevo.</div>
+      <!-- Badge de Nivel de Seguridad -->
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 border border-sky-200/80 text-sky-700 text-[11px] font-bold tracking-wide uppercase shadow-2xs mb-5">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-600"></span>
+        </span>
+        Terminal Segura Nivel III-1
+      </div>
+
+      <!-- Icono Central Vivo y Futurista Médica -->
+      <div class="relative mb-5 flex items-center justify-center">
+        <div class="absolute w-20 h-20 rounded-2xl bg-cyan-400/30 animate-ping opacity-30"></div>
+        <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-sky-600 via-cyan-500 to-sky-400 text-white flex items-center justify-center shadow-lg shadow-sky-500/30 ring-4 ring-white">
+          <span class="material-symbols-outlined text-[32px] drop-shadow">health_and_safety</span>
+          <span class="absolute -bottom-1 -right-1 bg-emerald-500 text-white p-0.5 rounded-full border-2 border-white shadow-xs">
+            <span class="material-symbols-outlined text-[13px] block">verified</span>
+          </span>
+        </div>
+      </div>
+
+      <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-tight">Stock Digital HES</h2>
+      <p class="text-xs sm:text-[13px] text-slate-500 font-medium mt-1 leading-snug">Central de Abastecimiento</p>
+
+      <!-- Input de PIN con diseño táctil high-tech -->
+      <div class="w-full mt-6 space-y-3">
+        <div class="relative w-full">
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-sky-600">
+            <span class="material-symbols-outlined text-[20px]">pin</span>
+          </div>
+          <!-- CONTRASEÑA ACTUAL: hes2026 -->
+          <input type="password" id="clave" placeholder="••••••••" autocomplete="current-password" class="w-full pl-10 pr-4 py-3 bg-slate-50/80 border-2 border-slate-200 rounded-xl text-center text-lg sm:text-xl font-mono tracking-[0.35em] text-slate-800 placeholder:text-slate-300 placeholder:tracking-widest focus:ring-4 focus:ring-sky-400/20 focus:border-sky-500 focus:bg-white transition-all outline-none" onkeypress="if(event.key === 'Enter') verificarPIN()">
+        </div>
+
+        <button onclick="verificarPIN()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 active:scale-[0.98] text-white font-bold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-sky-500/25 transition-all cursor-pointer">
+          <span class="material-symbols-outlined text-[20px]">lock_open</span>
+          <span class="">Desbloquear Terminal</span>
+        </button>
+      </div>
+
+      <div id="error-pin" class="hidden mt-3 px-3 py-1.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-600 text-xs font-semibold flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[16px]">error</span>
+        <span class="">PIN incorrecto. Reintente con la clave oficial.</span>
+      </div>
+
+      <div class="mt-6 pt-3.5 border-t border-slate-100 w-full flex items-center justify-center gap-1.5 text-[11px] text-slate-400 font-medium">
+        <span class="material-symbols-outlined text-[14px]">fingerprint</span>
+        <span class="">Autenticación de Personal Autorizado HES</span>
+      </div>
     </div>
   </div>
 
-  <!-- APLICACIÓN PRINCIPAL OCULTA HASTA INGRESAR EL PIN -->
+  <!-- 2. APLICACIÓN PRINCIPAL OCULTA HASTA INGRESAR EL PIN -->
   <div id="app-principal" class="hidden flex-col w-full min-h-screen flex-1">
   
-    <!-- TOP APP BAR / HEADER PROFESIONAL DE SALUD -->
-    <header
-      class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 px-3 sm:px-4 lg:px-6 py-2.5 sm:py-3 z-30 shadow-xs">
-      <div
-        class="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-4 w-full">
-        <!-- Entidad Hospitalaria -->
+    <!-- TOP APP BAR -->
+    <header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 px-3 sm:px-4 lg:px-6 py-2.5 sm:py-3 z-30 shadow-xs">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-4 w-full">
         <div class="flex items-center gap-2.5 sm:gap-3.5 min-w-0">
-          <div
-            class="h-9 w-9 sm:h-11 sm:w-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-sky-600 via-sky-500 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-sky-500/20 ring-2 ring-sky-500/25 shrink-0">
+          <div class="h-9 w-9 sm:h-11 sm:w-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-sky-600 via-sky-500 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-sky-500/20 ring-2 ring-sky-500/25 shrink-0">
             <span class="material-symbols-outlined text-[20px] sm:text-[24px]">local_hospital</span>
           </div>
           <div class="min-w-0">
@@ -171,63 +131,51 @@
               <span class="font-extrabold text-sm sm:text-base lg:text-lg tracking-tight text-slate-900 dark:text-white truncate">HES Hospital Especialidades</span>
               <span class="inline-flex items-center px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-bold bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 shrink-0">Nivel III-1</span>
             </div>
-            <p
-              class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium leading-tight flex items-center gap-1.5 mt-0.5 truncate">
+            <p class="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium leading-tight flex items-center gap-1.5 mt-0.5 truncate">
               <span class="truncate">Stock Digital Medicamentos</span>
               <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-700 shrink-0"></span>
               <span class="text-slate-400 truncate hidden xs:inline">Central Abastecimiento</span>
             </p>
           </div>
         </div>
-        <!-- Indicador de Sincronización y Acciones de Cabecera -->
-        <div
-          class="flex items-center justify-between sm:justify-end gap-2 sm:gap-3.5 w-full sm:w-auto pt-1 sm:pt-0 border-t sm:border-t-0 border-slate-100 dark:border-slate-800/80">
+        <div class="flex items-center justify-between sm:justify-end gap-2 sm:gap-3.5 w-full sm:w-auto pt-1 sm:pt-0 border-t sm:border-t-0 border-slate-100 dark:border-slate-800/80">
           <div class="flex items-center">
-            <div
-              class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 shadow-2xs"
-              id="lblActualizado">
+            <div class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/60 shadow-2xs" id="lblActualizado">
               <span class="relative flex h-2 w-2">
-  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               <span class="truncate max-w-[170px] sm:max-w-none" id="syncText">En tiempo real: Hoy a las 00:13</span>
             </div>
           </div>
           <div class="flex items-center gap-2">
-            <div
-              class="hidden lg:flex items-center gap-2.5 bg-slate-100/80 dark:bg-slate-800/70 py-1.5 px-3 rounded-xl border border-slate-200/70 dark:border-slate-700/60">
-              <div
-                class="relative w-7 h-7 rounded-lg bg-gradient-to-br from-sky-500 to-cyan-600 text-white flex items-center justify-center shadow-xs">
+            <div class="hidden lg:flex items-center gap-2.5 bg-slate-100/80 dark:bg-slate-800/70 py-1.5 px-3 rounded-xl border border-slate-200/70 dark:border-slate-700/60">
+              <div class="relative w-7 h-7 rounded-lg bg-gradient-to-br from-sky-500 to-cyan-600 text-white flex items-center justify-center shadow-xs">
                 <span class="material-symbols-outlined text-[16px]">person</span>
               </div>
               <div class="text-left">
-                <div
-                  class="text-[9px] uppercase font-bold tracking-wider text-slate-400 dark:text-slate-500 leading-none">
-                  Autor</div>
+                <div class="text-[9px] uppercase font-bold tracking-wider text-slate-400 dark:text-slate-500 leading-none">Autor</div>
                 <div class="text-[11px] font-medium text-slate-500 dark:text-slate-400 mt-0.5">Q.F. Juan Sánchez</div>
               </div>
             </div>
-            <!-- Botón Modo Oscuro/Claro -->
             <button aria-label="Cambiar tema visual" class="p-1.5 sm:p-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition-colors shadow-2xs" id="btnTheme" onclick="toggleTheme()">
-  <span class="material-symbols-outlined text-[18px] sm:text-[20px] hidden" id="iconSun">light_mode</span>
-  <span class="material-symbols-outlined text-[18px] sm:text-[20px] block" id="iconMoon">dark_mode</span>
-  </button>
+              <span class="material-symbols-outlined text-[18px] sm:text-[20px] hidden" id="iconSun">light_mode</span>
+              <span class="material-symbols-outlined text-[18px] sm:text-[20px] block" id="iconMoon">dark_mode</span>
+            </button>
           </div>
         </div>
       </div>
     </header>
-    <!-- CONTENEDOR PRINCIPAL RESPONSIVO -->
+
+    <!-- CONTENEDOR PRINCIPAL -->
     <div class="flex-1 flex flex-col p-2 sm:p-4 md:p-6 max-w-7xl w-full mx-auto space-y-3 sm:space-y-4 overflow-x-hidden">
-      <!-- 4 TARJETAS / KPIS RESUMEN SUPERIOR: 2 columnas en celular vertical, 4 en desktop -->
-      <section aria-label="Indicadores clave de inventario"
-        class="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3.5 w-full">
-        <!-- KPI 1 -->
-        <div
-          class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 md:p-4 shadow-xs hover:border-sky-300 dark:hover:border-sky-700 transition flex flex-col justify-between">
+      <!-- 4 TARJETAS KPIS -->
+      <section aria-label="Indicadores clave de inventario" class="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3.5 w-full">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 md:p-4 shadow-xs hover:border-sky-300 dark:hover:border-sky-700 transition flex flex-col justify-between">
           <div class="flex items-start justify-between gap-1">
             <span class="text-[11px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 leading-tight">Total Medicamentos</span>
             <span class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-sky-50 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
-  <span class="material-symbols-outlined text-[15px] sm:text-[19px]">medication</span>
+              <span class="material-symbols-outlined text-[15px] sm:text-[19px]">medication</span>
             </span>
           </div>
           <div class="mt-1.5 sm:mt-2 flex flex-wrap items-baseline gap-1 sm:gap-2">
@@ -236,45 +184,37 @@
           </div>
           <p class="text-[9px] sm:text-[11px] text-slate-400 dark:text-slate-500 mt-1 line-clamp-1">Catálogo SISMED</p>
         </div>
-        <!-- KPI 2 -->
-        <div
-          class="bg-white dark:bg-slate-900 border border-cyan-200/70 dark:border-cyan-900/50 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 md:p-4 shadow-xs bg-gradient-to-br from-white to-cyan-50/40 dark:from-slate-900 dark:to-cyan-950/20 flex flex-col justify-between">
+        <div class="bg-white dark:bg-slate-900 border border-cyan-200/70 dark:border-cyan-900/50 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 md:p-4 shadow-xs bg-gradient-to-br from-white to-cyan-50/40 dark:from-slate-900 dark:to-cyan-950/20 flex flex-col justify-between">
           <div class="flex items-start justify-between gap-1">
             <span class="text-[11px] sm:text-xs font-bold text-cyan-800 dark:text-cyan-300 leading-tight">Stock AlmHES Central</span>
             <span class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-cyan-100/80 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 flex items-center justify-center shrink-0">
-  <span class="material-symbols-outlined text-[15px] sm:text-[19px]">warehouse</span>
+              <span class="material-symbols-outlined text-[15px] sm:text-[19px]">warehouse</span>
             </span>
           </div>
           <div class="mt-1.5 sm:mt-2 flex flex-wrap items-baseline gap-1">
             <span class="text-lg sm:text-xl md:text-2xl font-black font-mono-num text-cyan-950 dark:text-cyan-200" id="kpiTotalAlmhes">17,250</span>
             <span class="text-[9px] sm:text-xs font-semibold text-cyan-700 dark:text-cyan-400">unds</span>
           </div>
-          <p class="text-[9px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-1 line-clamp-1">Almacén hospitalario
-          </p>
+          <p class="text-[9px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-1 line-clamp-1">Almacén hospitalario</p>
         </div>
-        <!-- KPI 3 -->
-        <div
-          class="bg-white dark:bg-slate-900 border border-amber-200/80 dark:border-amber-900/60 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 md:p-4 shadow-xs bg-gradient-to-br from-white to-amber-50/40 dark:from-slate-900 dark:to-amber-950/20 flex flex-col justify-between">
+        <div class="bg-white dark:bg-slate-900 border border-amber-200/80 dark:border-amber-900/60 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 md:p-4 shadow-xs bg-gradient-to-br from-white to-amber-50/40 dark:from-slate-900 dark:to-amber-950/20 flex flex-col justify-between">
           <div class="flex items-start justify-between gap-1">
             <span class="text-[11px] sm:text-xs font-bold text-amber-800 dark:text-amber-300 leading-tight">Stock Crítico / Alerta</span>
             <span class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-amber-100/90 dark:bg-amber-950 text-amber-700 dark:text-amber-300 flex items-center justify-center shrink-0">
-  <span class="material-symbols-outlined text-[15px] sm:text-[19px]">warning</span>
+              <span class="material-symbols-outlined text-[15px] sm:text-[19px]">warning</span>
             </span>
           </div>
           <div class="mt-1.5 sm:mt-2 flex flex-wrap items-baseline gap-1 sm:gap-2">
             <span class="text-lg sm:text-xl md:text-2xl font-black font-mono-num text-amber-900 dark:text-amber-200" id="kpiCriticos">0</span>
             <span class="text-[9px] sm:text-[11px] font-semibold text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/60 px-1.5 py-0.5 rounded border border-rose-200/60 dark:border-rose-800/60">O.C.</span>
           </div>
-          <p class="text-[9px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-1 line-clamp-1">&lt; 2 meses autonomía
-          </p>
+          <p class="text-[9px] sm:text-[11px] text-slate-500 dark:text-slate-400 mt-1 line-clamp-1">&lt; 2 meses autonomía</p>
         </div>
-        <!-- KPI 4 -->
-        <div
-          class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 md:p-4 shadow-xs flex flex-col justify-between">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 md:p-4 shadow-xs flex flex-col justify-between">
           <div class="flex items-start justify-between gap-1">
             <span class="text-[11px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 leading-tight">Consumo Mensual</span>
             <span class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-amber-50 dark:bg-amber-950/70 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
-  <span class="material-symbols-outlined text-[15px] sm:text-[19px]">trending_up</span>
+              <span class="material-symbols-outlined text-[15px] sm:text-[19px]">trending_up</span>
             </span>
           </div>
           <div class="mt-1.5 sm:mt-2 flex flex-wrap items-baseline gap-1">
@@ -284,12 +224,10 @@
           <p class="text-[9px] sm:text-[11px] text-slate-400 dark:text-slate-500 mt-1 line-clamp-1">Promedio histórico</p>
         </div>
       </section>
-      <!-- BARRA DE CONTROL, BÚSQUEDA Y FILTROS INTERACTIVOS -->
-      <section
-        class="bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200/80 dark:border-slate-800 p-2.5 sm:p-3.5 shadow-xs space-y-2.5 sm:space-y-3">
-        <!-- Fila superior: Buscador + Controles -->
+
+      <!-- BARRA DE BÚSQUEDA Y FILTROS -->
+      <section class="bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200/80 dark:border-slate-800 p-2.5 sm:p-3.5 shadow-xs space-y-2.5 sm:space-y-3">
         <div class="flex flex-col gap-2.5 sm:gap-3">
-          <!-- Buscador (w-full completo en móvil) -->
           <div class="relative w-full">
             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
               <span class="material-symbols-outlined text-[18px]">search</span>
@@ -297,170 +235,141 @@
             <input class="w-full pl-9 pr-14 py-2 bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl text-xs sm:text-sm font-medium focus:ring-2 focus:ring-sky-500 focus:border-sky-500 dark:focus:ring-sky-400 placeholder:text-slate-400 transition" id="searchInput" placeholder="Buscar por código SISMED, nombre..." type="text">
             <div class="absolute inset-y-0 right-0 pr-2 flex items-center gap-1">
               <button class="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hidden" id="btnClearSearch" onclick="limpiarBusqueda()">
-  <span class="material-symbols-outlined text-[16px]">close</span>
-  </button>
+                <span class="material-symbols-outlined text-[16px]">close</span>
+              </button>
               <kbd class="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono text-slate-400 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded">Ctrl+K</kbd>
             </div>
           </div>
-          <!-- Switches y controles con flex-wrap -->
           <div class="flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 w-full">
             <div class="flex items-center flex-wrap gap-1.5 sm:gap-2">
               <label class="cursor-pointer select-none inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg sm:rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/70 transition text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-300">
-  <input class="w-3.5 h-3.5 rounded text-sky-600 focus:ring-sky-500 dark:bg-slate-700 border-slate-300 dark:border-slate-600" id="toggleAreas" type="checkbox">
-  <span class="material-symbols-outlined text-[15px] text-slate-500">domain</span>
-  <span>Farmacias</span>
-  </label>
+                <input class="w-3.5 h-3.5 rounded text-sky-600 focus:ring-sky-500 dark:bg-slate-700 border-slate-300 dark:border-slate-600" id="toggleAreas" type="checkbox">
+                <span class="material-symbols-outlined text-[15px] text-slate-500">domain</span>
+                <span class="">Farmacias</span>
+              </label>
               <label class="cursor-pointer select-none inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg sm:rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700/70 transition text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-300">
-  <input class="w-3.5 h-3.5 rounded text-sky-600 focus:ring-sky-500 dark:bg-slate-700 border-slate-300 dark:border-slate-600" id="toggleStockOculto" type="checkbox">
-  <span class="material-symbols-outlined text-[15px] text-emerald-600 dark:text-emerald-400">stacked_line_chart</span>
-  <span>AlmHAS / FarmHAS</span>
-  </label>
+                <input class="w-3.5 h-3.5 rounded text-sky-600 focus:ring-sky-500 dark:bg-slate-700 border-slate-300 dark:border-slate-600" id="toggleStockOculto" type="checkbox">
+                <span class="material-symbols-outlined text-[15px] text-emerald-600 dark:text-emerald-400">stacked_line_chart</span>
+                <span class="">AlmHAS / FarmHAS</span>
+              </label>
             </div>
             <div class="flex items-center gap-1.5 sm:gap-2 ml-auto">
-              <!-- Switch de vista Tabla / Tarjetas -->
-              <div
-                class="inline-flex rounded-lg sm:rounded-xl p-0.5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <div class="inline-flex rounded-lg sm:rounded-xl p-0.5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
                 <button class="px-2 py-1 rounded-md text-[11px] sm:text-xs font-semibold bg-white dark:bg-slate-700 shadow-2xs text-sky-700 dark:text-sky-300 flex items-center gap-1 transition" id="btnVistaTabla" onclick="cambiarVista('tabla')" title="Vista en Tabla">
-  <span class="material-symbols-outlined text-[15px]">table_rows</span>
-  <span class="inline">Tabla</span>
-  </button>
+                  <span class="material-symbols-outlined text-[15px]">table_rows</span>
+                  <span class="inline">Tabla</span>
+                </button>
                 <button class="px-2 py-1 rounded-md text-[11px] sm:text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1 transition" id="btnVistaCards" onclick="cambiarVista('cards')" title="Vista en Tarjetas">
-  <span class="material-symbols-outlined text-[15px]">grid_view</span>
-  <span class="inline">Tarjetas</span>
-  </button>
+                  <span class="material-symbols-outlined text-[15px]">grid_view</span>
+                  <span class="inline">Tarjetas</span>
+                </button>
               </div>
               <button class="p-1.5 sm:p-2 rounded-lg sm:rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 transition" onclick="recargarDatos()" title="Sincronizar ahora con Google Sheets">
-  <span class="material-symbols-outlined text-[17px]">sync</span>
-  </button>
+                <span class="material-symbols-outlined text-[17px]">sync</span>
+              </button>
             </div>
           </div>
         </div>
-        <!-- Fila inferior: Chips Interactivos Semáforo con Scroll Horizontal Suave -->
         <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80">
-          <div
-            class="flex items-center gap-1.5 overflow-x-auto pb-1 max-w-full custom-scrollbar text-xs whitespace-nowrap">
+          <div class="flex items-center gap-1.5 overflow-x-auto pb-1 max-w-full custom-scrollbar text-xs whitespace-nowrap">
             <span class="text-slate-400 dark:text-slate-500 font-medium text-[10px] sm:text-[11px] uppercase tracking-wider pr-1 shrink-0">Filtro:</span>
-            <button class="chip-filtro px-3 py-1 rounded-full font-semibold border transition shrink-0 cursor-pointer bg-sky-600 text-white border-sky-600 shadow-2xs text-[11px] sm:text-xs" id="chip-todos" onclick="filtrarPorNivel('todos')">Todos (<span id="count-todos">2</span>)</button>
-            <button class="chip-filtro px-3 py-1 rounded-full font-semibold border transition bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-rose-50 hover:border-rose-300 hover:text-rose-700 shrink-0 cursor-pointer text-[11px] sm:text-xs" id="chip-agotado" onclick="filtrarPorNivel('agotado')"><span class="inline-block w-2 h-2 rounded-full bg-rose-500 mr-1.5"></span>Agotado (<span id="count-agotado">0</span>)</button>
-            <button class="chip-filtro px-3 py-1 rounded-full font-semibold border transition bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-amber-50 hover:border-amber-300 hover:text-amber-800 shrink-0 cursor-pointer text-[11px] sm:text-xs" id="chip-critico" onclick="filtrarPorNivel('critico')"><span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-1.5"></span>Crítico &lt; 1m (<span id="count-critico">0</span>)</button>
-            <button class="chip-filtro px-3 py-1 rounded-full font-semibold border transition bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-yellow-50 hover:border-yellow-300 hover:text-yellow-800 shrink-0 cursor-pointer text-[11px] sm:text-xs" id="chip-alerta" onclick="filtrarPorNivel('alerta')"><span class="inline-block w-2 h-2 rounded-full bg-yellow-400 mr-1.5"></span>Alerta 1-2m (<span id="count-alerta">0</span>)</button>
-            <button class="chip-filtro px-3 py-1 rounded-full font-semibold border transition bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-emerald-50 hover:border-emerald-300 hover:text-emerald-800 shrink-0 cursor-pointer text-[11px] sm:text-xs" id="chip-optimo" onclick="filtrarPorNivel('optimo')"><span class="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-1.5"></span>Óptimo &gt; 2m (<span id="count-optimo">2</span>)</button>
+            <button class="chip-filtro px-3 py-1 rounded-full font-semibold border transition shrink-0 cursor-pointer bg-sky-600 text-white border-sky-600 shadow-2xs text-[11px] sm:text-xs" id="chip-todos" onclick="filtrarPorNivel('todos')">Todos (<span id="count-todos" class="">2</span>)</button>
+            <button class="chip-filtro px-3 py-1 rounded-full font-semibold border transition bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-rose-50 hover:border-rose-300 hover:text-rose-700 shrink-0 cursor-pointer text-[11px] sm:text-xs" id="chip-agotado" onclick="filtrarPorNivel('agotado')"><span class="inline-block w-2 h-2 rounded-full bg-rose-500 mr-1.5"></span>Agotado (<span id="count-agotado" class="">0</span>)</button>
+            <button class="chip-filtro px-3 py-1 rounded-full font-semibold border transition bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-amber-50 hover:border-amber-300 hover:text-amber-800 shrink-0 cursor-pointer text-[11px] sm:text-xs" id="chip-critico" onclick="filtrarPorNivel('critico')"><span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-1.5"></span>Crítico &lt; 1m (<span id="count-critico" class="">0</span>)</button>
+            <button class="chip-filtro px-3 py-1 rounded-full font-semibold border transition bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-yellow-50 hover:border-yellow-300 hover:text-yellow-800 shrink-0 cursor-pointer text-[11px] sm:text-xs" id="chip-alerta" onclick="filtrarPorNivel('alerta')"><span class="inline-block w-2 h-2 rounded-full bg-yellow-400 mr-1.5"></span>Alerta 1-2m (<span id="count-alerta" class="">0</span>)</button>
+            <button class="chip-filtro px-3 py-1 rounded-full font-semibold border transition bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-emerald-50 hover:border-emerald-300 hover:text-emerald-800 shrink-0 cursor-pointer text-[11px] sm:text-xs" id="chip-optimo" onclick="filtrarPorNivel('optimo')"><span class="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-1.5"></span>Óptimo &gt; 2m (<span id="count-optimo" class="">2</span>)</button>
           </div>
         </div>
       </section>
-      <!-- AREA PRINCIPAL: TABLA Y TARJETAS RESPONSIVAS -->
-      <main
-        class="flex-1 bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col relative min-h-[380px] w-full">
-        <!-- Loader EKG Médico -->
-        <div
-          class="absolute inset-0 flex flex-col justify-center items-center bg-white/85 dark:bg-slate-900/90 backdrop-blur-sm z-50 transition-opacity duration-200 opacity-0 pointer-events-none hidden"
-          id="loading">
+
+      <!-- TABLA Y TARJETAS -->
+      <main class="flex-1 bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col relative min-h-[380px] w-full">
+        <div class="absolute inset-0 flex flex-col justify-center items-center bg-white/85 dark:bg-slate-900/90 backdrop-blur-sm z-50 transition-opacity duration-200 opacity-0 pointer-events-none hidden" id="loading">
           <svg class="ekg-loader mb-3" viewBox="0 0 100 100">
             <polyline points="10,50 30,50 40,20 60,80 70,50 90,50"></polyline>
           </svg>
-          <div class="text-sky-700 dark:text-sky-400 text-xs font-bold tracking-wider uppercase">Procesando Matriz
-            Farmacológica...</div>
+          <div class="text-sky-700 dark:text-sky-400 text-xs font-bold tracking-wider uppercase">Procesando Matriz Farmacológica...</div>
           <span class="text-[11px] text-slate-400 dark:text-slate-500 mt-1">Conectando en directo con Google Sheets</span>
         </div>
-        <!-- VISTA EN TABLA: scroll horizontal interno aislado para no romper la pantalla general -->
+
+        <!-- 3. TABLA CON CABECERAS FIJAS (STICKY HEADERS) Y DESCRIPCIONES ADAPTADAS A 2 RENGLONES -->
         <div class="custom-scrollbar flex-1 overflow-x-auto overflow-y-auto w-full max-w-full" id="contenedorTabla">
           <table class="min-w-full text-left border-collapse" id="mainTable">
-            <thead>
-              <tr
-                class="bg-slate-50/95 dark:bg-slate-800/90 backdrop-blur text-slate-600 dark:text-slate-300 text-xs font-bold border-b border-slate-200 dark:border-slate-700/80">
-                <th
-                  class="px-3 py-3 w-24 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border-r border-slate-200/70 dark:border-slate-800"
-                  onclick="ordenarPor('Código')">
+            <thead class="sticky top-0 z-20 shadow-xs">
+              <tr class="bg-slate-50/95 dark:bg-slate-800/95 backdrop-blur text-slate-600 dark:text-slate-300 text-xs font-bold border-b border-slate-200 dark:border-slate-700">
+                <th class="px-3 py-3 w-24 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border-r border-slate-200/70 dark:border-slate-800 sticky top-0 bg-slate-50/95 dark:bg-slate-800/95" onclick="ordenarPor('Código')">
                   <div class="flex items-center justify-between gap-1">
                     <span class="tracking-wide uppercase text-[10px] sm:text-[11px] flex items-center gap-1">
-  <span class="material-symbols-outlined text-[14px] text-slate-400">tag</span>Código
+                      <span class="material-symbols-outlined text-[14px] text-slate-400">tag</span>Código
                     </span>
                     <span class="text-slate-400 text-xs" id="sort-Código">↕</span>
                   </div>
                 </th>
-                <th
-                  class="px-3 sm:px-4 py-3 min-w-[200px] sm:min-w-[280px] max-w-md cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border-r border-slate-200/70 dark:border-slate-800"
-                  onclick="ordenarPor('Artículo')">
+                <!-- Descripción del artículo -->
+                <th class="px-3 sm:px-4 py-3 min-w-[210px] sm:min-w-[280px] max-w-md cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border-r border-slate-200/70 dark:border-slate-800 sticky top-0 bg-slate-50/95 dark:bg-slate-800/95" onclick="ordenarPor('Artículo')">
                   <div class="flex items-center justify-between gap-1">
                     <span class="tracking-wide uppercase text-[10px] sm:text-[11px] flex items-center gap-1">
-  <span class="material-symbols-outlined text-[14px] text-slate-400">medication_liquid</span>Descripción del Artículo
+                      <span class="material-symbols-outlined text-[14px] text-slate-400">medication_liquid</span>Descripción del Artículo
                     </span>
                     <span class="text-slate-400 text-xs" id="sort-Artículo">↕</span>
                   </div>
                 </th>
-                <th
-                  class="hidden sm:table-cell px-2.5 py-3 w-28 sm:w-32 text-center border-r border-slate-200/70 dark:border-slate-800 col-autonomia">
+                <th class="hidden sm:table-cell px-2.5 py-3 w-28 sm:w-32 text-center border-r border-slate-200/70 dark:border-slate-800 col-autonomia sticky top-0 bg-slate-50/95 dark:bg-slate-800/95">
                   <span class="tracking-wide uppercase text-[10px] sm:text-[11px] flex items-center justify-center gap-1 text-slate-500 dark:text-slate-400">
-  <span class="material-symbols-outlined text-[14px]">traffic</span>Autonomía
+                    <span class="material-symbols-outlined text-[14px]">traffic</span>Autonomía
                   </span>
                 </th>
-                <th
-                  class="px-2.5 py-3 w-24 sm:w-28 text-center cursor-pointer bg-cyan-100/80 dark:bg-cyan-950/80 text-cyan-950 dark:text-cyan-200 border-r border-cyan-200 dark:border-cyan-900 transition-colors hover:brightness-95"
-                  onclick="ordenarPor('AlmHES')">
+                <th class="px-2.5 py-3 w-24 sm:w-28 text-center cursor-pointer bg-cyan-100/95 dark:bg-cyan-950/90 text-cyan-950 dark:text-cyan-200 border-r border-cyan-200 dark:border-cyan-900 transition-colors hover:brightness-95 sticky top-0" onclick="ordenarPor('AlmHES')">
                   <div class="flex flex-col items-center">
                     <span class="text-[10px] sm:text-[11px] uppercase font-extrabold flex items-center gap-0.5">
-  <span class="material-symbols-outlined text-[14px] text-cyan-700 dark:text-cyan-400">warehouse</span>AlmHES
+                      <span class="material-symbols-outlined text-[14px] text-cyan-700 dark:text-cyan-400">warehouse</span>AlmHES
                     </span>
                     <span class="text-[9px] font-semibold opacity-75" id="sort-AlmHES">↓</span>
                   </div>
                 </th>
-                <th
-                  class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50 dark:bg-slate-800/80 border-r border-slate-200/70 dark:border-slate-800"
-                  onclick="ordenarPor('FCEXT')">
+                <th class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50/95 dark:bg-slate-800/95 border-r border-slate-200/70 dark:border-slate-800 sticky top-0" onclick="ordenarPor('FCEXT')">
                   <span class="text-[10px] sm:text-[11px] font-bold text-emerald-600 dark:text-emerald-400">FCEXT</span>
                 </th>
-                <th
-                  class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50 dark:bg-slate-800/80 border-r border-slate-200/70 dark:border-slate-800"
-                  onclick="ordenarPor('FDU')">
-                  <span class="text-[10px] sm:text-[11px] font-bold text-blue-600 dark:text-blue-400">FDU</span></th>
-                <th
-                  class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50 dark:bg-slate-800/80 border-r border-slate-200/70 dark:border-slate-800"
-                  onclick="ordenarPor('FUCI')">
-                  <span class="text-[10px] sm:text-[11px] font-bold text-rose-600 dark:text-rose-400">FUCI</span></th>
-                <th
-                  class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50 dark:bg-slate-800/80 border-r border-slate-200/70 dark:border-slate-800"
-                  onclick="ordenarPor('FCQX')">
-                  <span class="text-[10px] sm:text-[11px] font-bold text-purple-600 dark:text-purple-400">FCQX</span></th>
-                <th
-                  class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50 dark:bg-slate-800/80 border-r border-slate-200/70 dark:border-slate-800"
-                  onclick="ordenarPor('FEME')">
-                  <span class="text-[10px] sm:text-[11px] font-bold text-amber-600 dark:text-amber-400">FEME</span></th>
-                <th
-                  class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50 dark:bg-slate-800/80 border-r border-slate-200/70 dark:border-slate-800"
-                  onclick="ordenarPor('FMES')">
-                  <span class="text-[10px] sm:text-[11px] font-bold text-teal-600 dark:text-teal-400">FMES</span></th>
-                <th
-                  class="col-oculta hidden px-2 py-3 w-20 text-center cursor-pointer bg-emerald-100/80 dark:bg-emerald-950/80 text-emerald-950 dark:text-emerald-200 border-r border-emerald-200 dark:border-emerald-900"
-                  onclick="ordenarPor('StockHAS')">
+                <th class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50/95 dark:bg-slate-800/95 border-r border-slate-200/70 dark:border-slate-800 sticky top-0" onclick="ordenarPor('FDU')">
+                  <span class="text-[10px] sm:text-[11px] font-bold text-blue-600 dark:text-blue-400">FDU</span>
+                </th>
+                <th class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50/95 dark:bg-slate-800/95 border-r border-slate-200/70 dark:border-slate-800 sticky top-0" onclick="ordenarPor('FUCI')">
+                  <span class="text-[10px] sm:text-[11px] font-bold text-rose-600 dark:text-rose-400">FUCI</span>
+                </th>
+                <th class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50/95 dark:bg-slate-800/95 border-r border-slate-200/70 dark:border-slate-800 sticky top-0" onclick="ordenarPor('FCQX')">
+                  <span class="text-[10px] sm:text-[11px] font-bold text-purple-600 dark:text-purple-400">FCQX</span>
+                </th>
+                <th class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50/95 dark:bg-slate-800/95 border-r border-slate-200/70 dark:border-slate-800 sticky top-0" onclick="ordenarPor('FEME')">
+                  <span class="text-[10px] sm:text-[11px] font-bold text-amber-600 dark:text-amber-400">FEME</span>
+                </th>
+                <th class="col-areas hidden px-2 py-3 w-16 text-center cursor-pointer bg-slate-50/95 dark:bg-slate-800/95 border-r border-slate-200/70 dark:border-slate-800 sticky top-0" onclick="ordenarPor('FMES')">
+                  <span class="text-[10px] sm:text-[11px] font-bold text-teal-600 dark:text-teal-400">FMES</span>
+                </th>
+                <th class="col-oculta hidden px-2 py-3 w-20 text-center cursor-pointer bg-emerald-100/95 dark:bg-emerald-950/90 text-emerald-950 dark:text-emerald-200 border-r border-emerald-200 dark:border-emerald-900 sticky top-0" onclick="ordenarPor('StockHAS')">
                   <div class="flex flex-col items-center">
                     <span class="text-[10px] font-extrabold uppercase">AlmHAS</span><span class="text-[9px] opacity-75">Hosp</span>
                   </div>
                 </th>
-                <th
-                  class="col-oculta hidden px-2 py-3 w-20 text-center cursor-pointer bg-fuchsia-100/80 dark:bg-fuchsia-950/80 text-fuchsia-950 dark:text-fuchsia-200 border-r border-fuchsia-200 dark:border-fuchsia-900"
-                  onclick="ordenarPor('StockFarmHAS')">
+                <th class="col-oculta hidden px-2 py-3 w-20 text-center cursor-pointer bg-fuchsia-100/95 dark:bg-fuchsia-950/90 text-fuchsia-950 dark:text-fuchsia-200 border-r border-fuchsia-200 dark:border-fuchsia-900 sticky top-0" onclick="ordenarPor('StockFarmHAS')">
                   <div class="flex flex-col items-center">
                     <span class="text-[10px] font-extrabold uppercase">FarmHAS</span><span class="text-[9px] opacity-75">Farm</span>
                   </div>
                 </th>
-                <th
-                  class="px-2.5 py-3 w-24 sm:w-28 text-center cursor-pointer bg-amber-100/80 dark:bg-amber-950/80 text-amber-950 dark:text-amber-200 border-r border-amber-200 dark:border-amber-900 hover:brightness-95 transition-colors"
-                  onclick="ordenarPor('ConsPromMens')">
+                <th class="px-2.5 py-3 w-24 sm:w-28 text-center cursor-pointer bg-amber-100/95 dark:bg-amber-950/90 text-amber-950 dark:text-amber-200 border-r border-amber-200 dark:border-amber-900 hover:brightness-95 transition-colors sticky top-0" onclick="ordenarPor('ConsPromMens')">
                   <div class="flex flex-col items-center justify-center">
                     <span class="text-[10px] sm:text-[11px] uppercase font-extrabold flex items-center gap-0.5">
-  <span class="material-symbols-outlined text-[14px] text-amber-700 dark:text-amber-400">monitoring</span>ConsProm
+                      <span class="material-symbols-outlined text-[14px] text-amber-700 dark:text-amber-400">monitoring</span>ConsProm
                     </span>
                     <span class="text-[9px] font-semibold opacity-75">Mensual</span>
                   </div>
                 </th>
-                <th
-                  class="px-2 py-2.5 w-12 text-center bg-sky-50 dark:bg-sky-950/40 text-sky-900 border-r border-sky-200">
+                <th class="px-2 py-2.5 w-12 text-center bg-sky-50/95 dark:bg-sky-950/80 text-sky-900 border-r border-sky-200 col-sticky-action sticky top-0">
                   <div class="flex flex-col items-center justify-center">
                     <span class="material-symbols-outlined text-[16px] text-sky-600">monitoring</span>
                     <span class="text-[8px] uppercase font-bold text-sky-800">Hist</span>
                   </div>
                 </th>
-                <th class="px-2 py-2.5 w-12 text-center bg-teal-50 dark:bg-teal-950/40 text-teal-900">
+                <th class="px-2 py-2.5 w-12 text-center bg-teal-50/95 dark:bg-teal-950/80 text-teal-900 sticky top-0">
                   <div class="flex flex-col items-center justify-center">
                     <span class="material-symbols-outlined text-[16px] text-teal-600">storefront</span>
                     <span class="text-[8px] uppercase font-bold text-teal-800">Farm</span>
@@ -468,79 +377,62 @@
                 </th>
               </tr>
             </thead>
-            <tbody class="text-xs divide-y divide-slate-100 dark:divide-slate-800/80 bg-white dark:bg-slate-900"
-              id="tableBody"></tbody>
+            <tbody class="text-xs divide-y divide-slate-100 dark:divide-slate-800/80 bg-white dark:bg-slate-900" id="tableBody"></tbody>
           </table>
         </div>
-        <!-- VISTA EN TARJETAS RESPONSIVAS PARA SMARTPHONES Y TABLETS -->
-        <div
-          class="custom-scrollbar flex-1 overflow-y-auto p-2.5 sm:p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4 w-full hidden"
-          id="contenedorCards">
-        </div>
-        <!-- FOOTER DE TABLA: RESUMEN RÁPIDO & LEYENDA -->
-        <footer
-          class="px-3 sm:px-4 py-2 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/90 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 gap-1.5 shrink-0">
+
+        <!-- 4. VISTA EN TARJETAS: CON SOPORTE DINÁMICO DE FARMACIAS Y ALMHAS / FARMHAS -->
+        <div class="custom-scrollbar flex-1 overflow-y-auto p-2.5 sm:p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4 w-full hidden" id="contenedorCards"></div>
+
+        <footer class="px-3 sm:px-4 py-2 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/90 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 gap-1.5 shrink-0">
           <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-3">
             <span class="font-bold text-slate-700 dark:text-slate-300">Convenciones:</span>
             <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded bg-cyan-400"></span> AlmHES</span>
             <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded bg-amber-400"></span> Consumo</span>
-            <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded bg-sky-500"></span> Hist.
-            General</span>
-            <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded bg-teal-500"></span> Hist.
-            Farmacias</span>
+            <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded bg-sky-500"></span> Hist. General</span>
+            <span class="inline-flex items-center gap-1"><span class="w-2 h-2 rounded bg-teal-500"></span> Hist. Farmacias</span>
           </div>
           <div class="flex items-center gap-2 text-[10px] text-slate-400 dark:text-slate-500">
-            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">devices</span>Celular,
-            Tablet y PC</span>
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[13px]">devices</span>Celular, Tablet y PC</span>
           </div>
         </footer>
       </main>
     </div>
-    <!-- MODAL 1: HISTÓRICO GENERAL DE CONSUMO (Adaptado a Celular y Desktop) -->
-    <div
-      class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex justify-center items-center p-2 sm:p-4 md:p-6 transition-all duration-200 hidden"
-      id="modalConsumo">
-      <div
-        class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-4xl max-h-[92vh] flex flex-col border border-slate-200 dark:border-slate-800 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-        <!-- Modal Header -->
-        <div
-          class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+
+    <!-- MODAL 1: HISTÓRICO GENERAL DE CONSUMO -->
+    <div class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex justify-center items-center p-2 sm:p-4 md:p-6 transition-all duration-200 hidden" id="modalConsumo">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-4xl max-h-[92vh] flex flex-col border border-slate-200 dark:border-slate-800 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+        <div class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-2 mb-1 flex-wrap">
               <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 text-[11px] font-mono font-bold" id="modSubtitulo">SISMED: 00102</span>
               <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-900" id="modBadgeEstado">Óptimo 3.9m</span>
             </div>
-            <h2 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white leading-tight truncate"
-              id="modTitulo">PARACETAMOL 500 MG TABLETA</h2>
+            <h2 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white leading-tight truncate" id="modTitulo">PARACETAMOL 500 MG TABLETA</h2>
             <div class="flex items-center gap-1.5 mt-2">
               <button class="px-2.5 py-1 rounded-lg text-[11px] font-bold transition flex items-center gap-1 bg-sky-600 text-white shadow-2xs" id="tabEvolGeneral" onclick="cambiarPestanaModal('general')">
-  <span class="material-symbols-outlined text-[14px]">monitoring</span>Consumo Global
-            </button>
+                <span class="material-symbols-outlined text-[14px]">monitoring</span>Consumo Global
+              </button>
               <button class="px-2.5 py-1 rounded-lg text-[11px] font-bold transition flex items-center gap-1 bg-slate-200/80 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-teal-50 dark:hover:bg-teal-950/50 hover:text-teal-700 dark:hover:text-teal-300" id="tabEvolFarmacias" onclick="cambiarPestanaModal('farmacias')">
-  <span class="material-symbols-outlined text-[14px]">storefront</span>Farmacias
-            </button>
+                <span class="material-symbols-outlined text-[14px]">storefront</span>Farmacias
+              </button>
             </div>
           </div>
           <button class="self-end sm:self-start p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200/70 dark:hover:bg-slate-700/70 transition shrink-0" onclick="cerrarModal()">
-  <span class="material-symbols-outlined text-[20px] sm:text-[22px]">close</span>
-  </button>
+            <span class="material-symbols-outlined text-[20px] sm:text-[22px]">close</span>
+          </button>
         </div>
-        <!-- Modal Body -->
-        <div
-          class="p-3 sm:p-5 md:p-6 overflow-y-auto flex-1 space-y-4 bg-slate-50/50 dark:bg-slate-950/40 custom-scrollbar">
-          <!-- Tarjeta de Gráfico -->
-          <div
-            class="bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 p-3 sm:p-4 md:p-5 shadow-xs">
+        <div class="p-3 sm:p-5 md:p-6 overflow-y-auto flex-1 space-y-4 bg-slate-50/50 dark:bg-slate-950/40 custom-scrollbar">
+          <div class="bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 p-3 sm:p-4 md:p-5 shadow-xs">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
               <div class="flex items-center flex-wrap gap-2">
-                <h3
-                  class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1">
+                <h3 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1">
                   <span class="material-symbols-outlined text-[15px] text-sky-600">show_chart</span>
-                  <span>Curva Consumo Mensual</span>
+                  <span class="">Curva Consumo Mensual</span>
                 </h3>
                 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/80 shadow-2xs" id="modPromedioBadge">
-  <span class="material-symbols-outlined text-[13px] text-amber-600 dark:text-amber-400">trending_up</span>Promedio:
-                <span class="font-mono-num font-black" id="modPromedioBadgeVal">3,200</span>
+                  <span class="material-symbols-outlined text-[13px] text-amber-600 dark:text-amber-400">trending_up</span>Promedio:
+                  <span class="font-mono-num font-black" id="modPromedioBadgeVal">3,200</span>
                 </span>
               </div>
               <div class="flex items-center gap-1.5">
@@ -549,111 +441,83 @@
               </div>
             </div>
             <div class="w-full h-48 sm:h-56 relative">
-              <canvas height="200" id="graficoConsumo"
-                style="box-sizing: border-box; display: block; height: 200px; width: 100%;"></canvas>
+              <canvas height="200" id="graficoConsumo" style="box-sizing: border-box; display: block; height: 200px; width: 100%;"></canvas>
             </div>
           </div>
-          <!-- Tabla Cronológica de Consumo -->
-          <div
-            class="bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
-            <div
-              class="px-3 sm:px-4 py-2 sm:py-2.5 bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between">
+          <div class="bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
+            <div class="px-3 sm:px-4 py-2 sm:py-2.5 bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between">
               <span class="text-[11px] sm:text-xs font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1">
-  <span class="material-symbols-outlined text-[15px] text-sky-600">table_chart</span>Historial Cronológico
+                <span class="material-symbols-outlined text-[15px] text-sky-600">table_chart</span>Historial Cronológico
               </span>
             </div>
             <div class="overflow-x-auto custom-scrollbar w-full">
-              <table
-                class="min-w-full text-center divide-y divide-slate-200 dark:divide-slate-800 text-[11px] sm:text-xs">
-                <thead class="bg-slate-100/70 dark:bg-slate-800/80 font-bold text-slate-600 dark:text-slate-300"
-                  id="modCabeceras">
+              <table class="min-w-full text-center divide-y divide-slate-200 dark:divide-slate-800 text-[11px] sm:text-xs">
+                <thead class="bg-slate-100/70 dark:bg-slate-800/80 font-bold text-slate-600 dark:text-slate-300" id="modCabeceras">
                   <tr>
-                    <th
-                      class="px-3 py-2 uppercase text-sky-900 dark:text-sky-200 bg-sky-100 dark:bg-sky-950/80 border-l border-slate-200 dark:border-slate-700 font-black">
-                      Total</th>
+                    <th class="px-3 py-2 uppercase text-sky-900 dark:text-sky-200 bg-sky-100 dark:bg-sky-950/80 border-l border-slate-200 dark:border-slate-700 font-black">Total</th>
                   </tr>
                 </thead>
-                <tbody
-                  class="divide-y divide-slate-100 dark:divide-slate-800/60 bg-white dark:bg-slate-900 font-mono-num font-semibold text-slate-700 dark:text-slate-200"
-                  id="modValores">
+                <tbody class="divide-y divide-slate-100 dark:divide-slate-800/60 bg-white dark:bg-slate-900 font-mono-num font-semibold text-slate-700 dark:text-slate-200" id="modValores">
                   <tr>
-                    <td
-                      class="px-3 py-2 font-bold text-sky-700 dark:text-sky-300 bg-sky-50 dark:bg-sky-900/40 border-l border-slate-200 dark:border-slate-700">
-                      0</td>
+                    <td class="px-3 py-2 font-bold text-sky-700 dark:text-sky-300 bg-sky-50 dark:bg-sky-900/40 border-l border-slate-200 dark:border-slate-700">0</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
-        <!-- Modal Footer -->
-        <div
-          class="bg-slate-50 dark:bg-slate-800/80 px-4 sm:px-6 py-2.5 sm:py-3 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center">
+        <div class="bg-slate-50 dark:bg-slate-800/80 px-4 sm:px-6 py-2.5 sm:py-3 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center">
           <span class="text-[11px] text-slate-400">Presiona <kbd class="px-1 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-[9px]">Esc</kbd> para salir</span>
-          <button class="px-4 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-semibold text-xs transition shadow-xs" onclick="cerrarModal()">
-          Cerrar
-        </button>
+          <button class="px-4 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-semibold text-xs transition shadow-xs" onclick="cerrarModal()">Cerrar</button>
         </div>
       </div>
     </div>
+
     <!-- MODAL 2: DETALLE Y GRÁFICO HISTÓRICO DE FARMACIAS -->
-    <div
-      class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex justify-center items-center p-2 sm:p-4 md:p-6 transition-all duration-200 hidden"
-      id="modalFarmacias">
-      <div
-        class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl w-full max-w-4xl max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-        <div
-          class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+    <div class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex justify-center items-center p-2 sm:p-4 md:p-6 transition-all duration-200 hidden" id="modalFarmacias">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl w-full max-w-4xl max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+        <div class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700/80 px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-2 mb-1 flex-wrap">
               <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800 text-[11px] font-mono font-bold" id="modFarmSubtitulo">SISMED: 00102</span>
               <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-900" id="modFarmBadgeEstado">Óptimo 3.9m</span>
             </div>
-            <h2 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white leading-tight truncate"
-              id="modFarmTitulo">PARACETAMOL 500 MG TABLETA</h2>
+            <h2 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white leading-tight truncate" id="modFarmTitulo">PARACETAMOL 500 MG TABLETA</h2>
             <div class="flex items-center gap-1.5 mt-2">
               <button class="px-2.5 py-1 rounded-lg text-[11px] font-bold transition flex items-center gap-1 bg-slate-200/80 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-sky-50 hover:text-sky-700" onclick="cambiarPestanaModal('general')">
-  <span class="material-symbols-outlined text-[14px]">monitoring</span>Consumo Global
-            </button>
+                <span class="material-symbols-outlined text-[14px]">monitoring</span>Consumo Global
+              </button>
               <button class="px-2.5 py-1 rounded-lg text-[11px] font-bold transition flex items-center gap-1 bg-teal-600 text-white shadow-2xs" onclick="cambiarPestanaModal('farmacias')">
-  <span class="material-symbols-outlined text-[14px]">storefront</span>Farmacias
-            </button>
+                <span class="material-symbols-outlined text-[14px]">storefront</span>Farmacias
+              </button>
             </div>
           </div>
           <button class="self-end sm:self-start p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition shrink-0" onclick="cerrarModalFarmacias()">
-  <span class="material-symbols-outlined text-[20px] sm:text-[22px]">close</span>
-  </button>
+            <span class="material-symbols-outlined text-[20px] sm:text-[22px]">close</span>
+          </button>
         </div>
-        <div
-          class="p-3 sm:p-5 md:p-6 overflow-y-auto flex-1 space-y-4 bg-slate-50/50 dark:bg-slate-950/40 custom-scrollbar">
-          <div
-            class="bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 p-3 sm:p-4 md:p-5 shadow-xs">
+        <div class="p-3 sm:p-5 md:p-6 overflow-y-auto flex-1 space-y-4 bg-slate-50/50 dark:bg-slate-950/40 custom-scrollbar">
+          <div class="bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 p-3 sm:p-4 md:p-5 shadow-xs">
             <div class="flex items-center justify-between mb-3">
-              <h3
-                class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1">
+              <h3 class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1">
                 <span class="material-symbols-outlined text-[15px] text-teal-600">bar_chart</span>
-                <span>Consumo por Servicio</span>
+                <span class="">Consumo por Servicio</span>
               </h3>
               <span class="text-[10px] sm:text-[11px] font-semibold text-teal-700 dark:text-teal-400 bg-teal-50 dark:bg-teal-950/50 border border-teal-200 dark:border-teal-800/80 px-2 py-0.5 rounded-full">6 Servicios</span>
             </div>
             <div class="w-full h-48 sm:h-56 relative">
-              <canvas height="200" id="graficoFarmacias"
-                style="box-sizing: border-box; display: block; height: 200px; width: 100%;"></canvas>
+              <canvas height="200" id="graficoFarmacias" style="box-sizing: border-box; display: block; height: 200px; width: 100%;"></canvas>
             </div>
           </div>
-          <div
-            class="bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
-            <div
-              class="px-3 sm:px-4 py-2 sm:py-2.5 bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between">
+          <div class="bg-white dark:bg-slate-900 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
+            <div class="px-3 sm:px-4 py-2 sm:py-2.5 bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between">
               <span class="text-[11px] sm:text-xs font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1">
-  <span class="material-symbols-outlined text-[15px] text-teal-600">table_chart</span>Matriz Mensual
+                <span class="material-symbols-outlined text-[15px] text-teal-600">table_chart</span>Matriz Mensual
               </span>
             </div>
             <div class="overflow-x-auto custom-scrollbar w-full">
-              <table
-                class="min-w-full text-center divide-y divide-slate-200 dark:divide-slate-800 text-[11px] sm:text-xs">
-                <thead class="bg-slate-100/70 dark:bg-slate-800/80 font-bold text-slate-600 dark:text-slate-300"
-                  id="modFarmThead">
+              <table class="min-w-full text-center divide-y divide-slate-200 dark:divide-slate-800 text-[11px] sm:text-xs">
+                <thead class="bg-slate-100/70 dark:bg-slate-800/80 font-bold text-slate-600 dark:text-slate-300" id="modFarmThead">
                   <tr>
                     <th class="px-2.5 py-2 text-left font-bold text-slate-700 dark:text-slate-200">Farmacia</th>
                     <th class="px-2.5 py-2 font-semibold text-slate-600 dark:text-slate-300 capitalize">Ene 2026</th>
@@ -662,23 +526,16 @@
                     <th class="px-2.5 py-2 font-semibold text-slate-600 dark:text-slate-300 capitalize">Abr 2026</th>
                     <th class="px-2.5 py-2 font-semibold text-slate-600 dark:text-slate-300 capitalize">May 2026</th>
                     <th class="px-2.5 py-2 font-semibold text-slate-600 dark:text-slate-300 capitalize">Jun 2026</th>
-                    <th
-                      class="px-2.5 py-2 uppercase text-amber-900 dark:text-amber-200 bg-amber-100/90 dark:bg-amber-950/80 border-l border-amber-200 dark:border-amber-800/80 font-extrabold">
-                      PROMEDIO</th>
-                    <th
-                      class="px-2.5 py-2 uppercase text-teal-900 dark:text-teal-200 bg-teal-100/80 dark:bg-teal-950/80 border-l border-slate-200 dark:border-slate-700 font-black">
-                      TOTAL</th>
+                    <th class="px-2.5 py-2 uppercase text-amber-900 dark:text-amber-200 bg-amber-100/90 dark:bg-amber-950/80 border-l border-amber-200 dark:border-amber-800/80 font-extrabold">PROMEDIO</th>
+                    <th class="px-2.5 py-2 uppercase text-teal-900 dark:text-teal-200 bg-teal-100/80 dark:bg-teal-950/80 border-l border-slate-200 dark:border-slate-700 font-black">TOTAL</th>
                   </tr>
                 </thead>
-                <tbody
-                  class="divide-y divide-slate-100 dark:divide-slate-800/60 bg-white dark:bg-slate-900 font-mono-num font-semibold text-slate-700 dark:text-slate-200"
-                  id="modFarmTablaCuerpo"></tbody>
+                <tbody class="divide-y divide-slate-100 dark:divide-slate-800/60 bg-white dark:bg-slate-900 font-mono-num font-semibold text-slate-700 dark:text-slate-200" id="modFarmTablaCuerpo"></tbody>
               </table>
             </div>
           </div>
         </div>
-        <div
-          class="bg-slate-50 dark:bg-slate-800/80 px-4 sm:px-6 py-2.5 sm:py-3 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center">
+        <div class="bg-slate-50 dark:bg-slate-800/80 px-4 sm:px-6 py-2.5 sm:py-3 border-t border-slate-200 dark:border-slate-700 flex justify-between items-center">
           <span class="text-[11px] text-slate-400">Presiona <kbd class="px-1 py-0.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-[9px]">Esc</kbd> para salir</span>
           <button class="px-4 py-1.5 rounded-xl bg-teal-700 hover:bg-teal-600 text-white font-semibold text-xs transition shadow-xs" onclick="cerrarModalFarmacias()">Cerrar</button>
         </div>
@@ -686,7 +543,6 @@
     </div>
   </div>
   
-  <!-- JAVASCRIPT DE LÓGICA Y COMPATIBILIDAD COMPLETA -->
   <script>
     let dbStockOriginal = [];
     let dbStockFiltrado = [];
@@ -704,38 +560,61 @@
     let vistaActual = window.innerWidth < 768 ? 'cards' : 'tabla';
     const MESES_ORDEN = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
 
-    // 1. LÓGICA DE LA PANTALLA DE BLOQUEO (NUEVO)
     function verificarPIN() {
-      if(document.getElementById('clave').value === "hes2026") {
+      const inputClave = document.getElementById('clave');
+      if (inputClave && inputClave.value === "hes2026") {
         document.getElementById('pantalla-bloqueo').style.display = 'none';
-        
         const appPrincipal = document.getElementById('app-principal');
         appPrincipal.classList.remove('hidden');
         appPrincipal.classList.add('flex');
-        
-        // Al acceder exitosamente, disparamos la conexión a Google
         recargarDatos();
       } else {
-        document.getElementById('error-pin').style.display = 'block';
-        document.getElementById('clave').value = '';
+        const errorPin = document.getElementById('error-pin');
+        if (errorPin) {
+          errorPin.classList.remove('hidden');
+          errorPin.style.display = 'flex';
+        }
+        if (inputClave) {
+          inputClave.value = '';
+          inputClave.focus();
+        }
       }
     }
 
-    // 2. CONEXIÓN A GOOGLE SHEETS VIA FETCH (NUEVO)
     function recargarDatos() {
-      document.getElementById('loading').classList.remove('hidden', 'opacity-0', 'pointer-events-none');
-      
+      // Conexión real comentada
+      /*
       const API_URL = "https://script.google.com/macros/s/AKfycbxhCztK0lu3_pNN_rpYiW-bFxCEAulGGht5YAz1SW49ESEZR8jL7EEI4f4uBogK6tGseA/exec";
-      
       fetch(API_URL)
         .then(response => response.json())
-        .then(datos => {
-          inicializarApp(datos);
-        })
-        .catch(error => {
-          console.error("Error de conexión:", error);
-          document.getElementById('loading').innerHTML = "<div class='text-rose-500 font-bold'>Error conectando al servidor. Revisa tu conexión.</div>";
+        .then(datos => { inicializarApp(datos); });
+      */
+      setTimeout(() => {
+        inicializarApp({
+          stock: [
+            { 
+              "Código": "00102", 
+              "Artículo": "JERINGA DESCARTABLE 10ML CON AGUJA 21G X 1 1/2 CAJA X 100", 
+              "AlmHES": "12,450", 
+              "ConsPromMens": "3,200", 
+              "StockHAS": "14,330", 
+              "StockFarmHAS": "1,880",
+              "FCEXT": "450", "FDU": "620", "FUCI": "180", "FCQX": "120", "FEME": "890", "FMES": "310"
+            },
+            { 
+              "Código": "00245", 
+              "Artículo": "PARACETAMOL 500 MG TABLETA RECUBIERTA ACCIÓN RÁPIDA", 
+              "AlmHES": "4,800", 
+              "ConsPromMens": "1,150", 
+              "StockHAS": "5,970", 
+              "StockFarmHAS": "1,170",
+              "FCEXT": "320", "FDU": "210", "FUCI": "90", "FCQX": "65", "FEME": "410", "FMES": "150"
+            }
+          ],
+          consumo: {},
+          consPorAlm: {}
         });
+      }, 100);
     }
 
     function obtenerNombreCorto(nombreOriginal) {
@@ -860,7 +739,6 @@
         const art = String(fila['Artículo'] || '').toLowerCase();
         if (!(cod.includes(texto) || art.includes(texto))) return false;
         if (filtroNivelActual === 'todos') return true;
-        
         const consProm = fila['ConsPromMens'] || fila['ConsProm Mens'] || fila['ConsProm'] || '0';
         return calcularAutonomia(fila['AlmHES'], consProm).estado === filtroNivelActual;
       });
@@ -871,18 +749,25 @@
     document.addEventListener("DOMContentLoaded", () => {
       cambiarVista(window.innerWidth < 768 ? 'cards' : 'tabla');
       
+      // Control de switch de farmacias (actualiza tabla Y tarjetas)
       document.getElementById('toggleAreas').addEventListener('change', (e) => {
         mostrarAreas = e.target.checked;
         document.querySelectorAll('.col-areas').forEach(el => mostrarAreas ? el.classList.remove('hidden') : el.classList.add('hidden'));
+        renderizarCards(dbStockFiltrado);
       });
+
+      // Control de switch AlmHAS / FarmHAS (actualiza tabla Y tarjetas)
       document.getElementById('toggleStockOculto').addEventListener('change', (e) => {
         mostrarOcultas = e.target.checked;
         document.querySelectorAll('.col-oculta').forEach(el => mostrarOcultas ? el.classList.remove('hidden') : el.classList.add('hidden'));
+        renderizarCards(dbStockFiltrado);
       });
+
       document.getElementById('searchInput').addEventListener('input', (e) => {
         document.getElementById('btnClearSearch').classList.toggle('hidden', e.target.value.trim().length === 0);
         aplicarFiltrosYBusqueda();
       });
+
       document.addEventListener('keydown', (e) => {
         if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); document.getElementById('searchInput').focus(); }
       });
@@ -923,6 +808,7 @@
       renderizarTabla(datos); renderizarCards(datos);
     }
 
+    // RENDERIZAR TABLA CON ADAPTACIÓN DE DESCRIPCIONES A 2 RENGLONES EN MÓVIL
     function renderizarTabla(datos) {
       const tbody = document.getElementById('tableBody');
       if (datos.length === 0) {
@@ -944,10 +830,13 @@
             <td class="px-2.5 sm:px-3.5 py-2.5 sm:py-3 font-mono-num font-bold text-slate-900 dark:text-slate-200 border-r border-slate-100 dark:border-slate-800/60 whitespace-nowrap">
               <span class="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-[11px] sm:text-xs font-mono font-semibold border border-slate-200 dark:border-slate-700">${cod}</span>
             </td>
-            <td class="px-3 sm:px-4 py-2.5 sm:py-3 font-semibold text-slate-800 dark:text-slate-100 border-r border-slate-100 dark:border-slate-800/60 leading-snug">
-              <div class="flex items-center gap-1.5 sm:gap-2">
-                <span class="material-symbols-outlined text-[15px] text-slate-400 shrink-0">pill</span>
-                <span class="max-w-md line-clamp-1 text-[11px] sm:text-xs" title="${fila['Artículo'] || ''}">${fila['Artículo'] || '---'}</span>
+            <!-- Descripción adaptada a 2 renglones en móvil para que no se corte bruscamente -->
+            <td class="px-3 sm:px-4 py-2 sm:py-2.5 font-semibold text-slate-800 dark:text-slate-100 border-r border-slate-100 dark:border-slate-800/60 leading-snug">
+              <div class="flex items-start gap-1.5 sm:gap-2">
+                <span class="material-symbols-outlined text-[15px] sm:text-[16px] text-sky-600 dark:text-sky-400 mt-0.5 shrink-0">pill</span>
+                <span class="text-[11px] sm:text-xs line-clamp-2 break-words leading-tight max-w-[260px] sm:max-w-md" title="${fila['Artículo'] || ''}">
+                  ${fila['Artículo'] || '---'}
+                </span>
               </div>
             </td>
             <td class="hidden sm:table-cell px-2 sm:px-3 py-2.5 sm:py-3 text-center border-r border-slate-100 dark:border-slate-800/60 whitespace-nowrap">
@@ -979,6 +868,7 @@
       tbody.innerHTML = html;
     }
 
+    // RENDERIZAR TARJETAS CON INTEGRACIÓN COMPLETA DE FARMACIAS Y ALMHAS / FARMHAS
     function renderizarCards(datos) {
       const container = document.getElementById('contenedorCards');
       if (datos.length === 0) { 
@@ -990,6 +880,64 @@
         const cod = fila['Código'] || '';
         const consProm = fila['ConsPromMens'] || fila['ConsProm Mens'] || fila['ConsProm'] || '0';
         const autonomia = calcularAutonomia(fila['AlmHES'], consProm);
+
+        // Bloque dinámico para AlmHAS y FarmHAS
+        let bloqueHAS = '';
+        if (mostrarOcultas) {
+          bloqueHAS = `
+            <div class="grid grid-cols-2 gap-2 mt-2 p-2 rounded-lg bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200/60 dark:border-emerald-800/50 text-xs">
+              <div>
+                <span class="text-[9px] font-bold uppercase text-emerald-800 dark:text-emerald-300 flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[12px]">apartment</span>AlmHAS
+                </span>
+                <div class="font-mono-num font-black text-sm text-emerald-950 dark:text-emerald-200">${fila['StockHAS'] || '0'}</div>
+              </div>
+              <div>
+                <span class="text-[9px] font-bold uppercase text-fuchsia-800 dark:text-fuchsia-300 flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[12px]">local_pharmacy</span>FarmHAS
+                </span>
+                <div class="font-mono-num font-black text-sm text-fuchsia-950 dark:text-fuchsia-200">${fila['StockFarmHAS'] || '0'}</div>
+              </div>
+            </div>`;
+        }
+
+        // Bloque dinámico de 6 farmacias hospitalarias
+        let bloqueFarmacias = '';
+        if (mostrarAreas) {
+          bloqueFarmacias = `
+            <div class="mt-2.5 p-2 rounded-lg bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800">
+              <div class="text-[9px] font-bold uppercase tracking-wider text-slate-500 mb-1.5 flex items-center gap-1">
+                <span class="material-symbols-outlined text-[12px] text-teal-600">domain</span>Distribución por Farmacias
+              </div>
+              <div class="grid grid-cols-3 gap-1.5 text-center text-[10px]">
+                <div class="p-1 rounded bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60">
+                  <span class="block text-[8px] font-bold text-emerald-600">FCEXT</span>
+                  <span class="font-mono-num font-bold text-slate-800 dark:text-slate-200">${fila['FCEXT'] || '0'}</span>
+                </div>
+                <div class="p-1 rounded bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60">
+                  <span class="block text-[8px] font-bold text-blue-600">FDU</span>
+                  <span class="font-mono-num font-bold text-slate-800 dark:text-slate-200">${fila['FDU'] || '0'}</span>
+                </div>
+                <div class="p-1 rounded bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60">
+                  <span class="block text-[8px] font-bold text-rose-600">FUCI</span>
+                  <span class="font-mono-num font-bold text-slate-800 dark:text-slate-200">${fila['FUCI'] || '0'}</span>
+                </div>
+                <div class="p-1 rounded bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60">
+                  <span class="block text-[8px] font-bold text-purple-600">FCQX</span>
+                  <span class="font-mono-num font-bold text-slate-800 dark:text-slate-200">${fila['FCQX'] || '0'}</span>
+                </div>
+                <div class="p-1 rounded bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60">
+                  <span class="block text-[8px] font-bold text-amber-600">FEME</span>
+                  <span class="font-mono-num font-bold text-slate-800 dark:text-slate-200">${fila['FEME'] || '0'}</span>
+                </div>
+                <div class="p-1 rounded bg-white dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60">
+                  <span class="block text-[8px] font-bold text-teal-600">FMES</span>
+                  <span class="font-mono-num font-bold text-slate-800 dark:text-slate-200">${fila['FMES'] || '0'}</span>
+                </div>
+              </div>
+            </div>`;
+        }
+
         html += `
           <div class="bg-white dark:bg-slate-800/90 rounded-xl sm:rounded-2xl border border-slate-200 dark:border-slate-700/80 p-3 sm:p-4 shadow-xs flex flex-col justify-between hover:border-sky-300 dark:hover:border-sky-600 transition">
             <div>
@@ -997,8 +945,11 @@
                 <span class="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-[11px] font-mono font-bold border border-slate-200 dark:border-slate-600">#${cod}</span>
                 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold ${autonomia.color}">${autonomia.badge}</span>
               </div>
-              <h3 class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white line-clamp-2 leading-snug mb-2.5">${fila['Artículo'] || '---'}</h3>
-              <div class="grid grid-cols-2 gap-2 mb-3 bg-slate-50 dark:bg-slate-900/60 p-2 sm:p-2.5 rounded-lg sm:rounded-xl text-xs">
+              <!-- Descripción adaptada a 2 renglones legibles -->
+              <h3 class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white line-clamp-2 leading-snug mb-2.5 break-words" title="${fila['Artículo'] || ''}">
+                ${fila['Artículo'] || '---'}
+              </h3>
+              <div class="grid grid-cols-2 gap-2 mb-1 bg-slate-50 dark:bg-slate-900/60 p-2 sm:p-2.5 rounded-lg sm:rounded-xl text-xs">
                 <div>
                   <span class="text-[9px] sm:text-[10px] font-bold uppercase text-cyan-800 dark:text-cyan-300">AlmHES Central</span>
                   <div class="font-mono-num font-black text-sm sm:text-base text-cyan-950 dark:text-cyan-200">${fila['AlmHES'] || '0'}</div>
@@ -1008,8 +959,11 @@
                   <div class="font-mono-num font-black text-sm sm:text-base text-amber-950 dark:text-amber-200">${consProm}</div>
                 </div>
               </div>
+
+              ${bloqueHAS}
+              ${bloqueFarmacias}
             </div>
-            <div class="flex gap-2 mt-1">
+            <div class="flex gap-2 mt-3 pt-2 border-t border-slate-100 dark:border-slate-700/60">
               <button onclick="abrirModal('${cod}')" class="flex-1 py-1.5 sm:py-2 rounded-lg sm:rounded-xl bg-sky-50 text-sky-700 hover:bg-sky-600 hover:text-white transition text-[11px] sm:text-xs font-bold flex items-center justify-center gap-1 shadow-2xs border border-sky-200"><span class="material-symbols-outlined text-[15px]">monitoring</span>General</button>
               <button onclick="verHistorialFarmacias('${cod}')" class="flex-1 py-1.5 sm:py-2 rounded-lg sm:rounded-xl bg-teal-50 text-teal-700 hover:bg-teal-600 hover:text-white transition text-[11px] sm:text-xs font-bold flex items-center justify-center gap-1 shadow-2xs border border-teal-200"><span class="material-symbols-outlined text-[15px]">storefront</span>Farmacias</button>
             </div>
@@ -1092,7 +1046,6 @@
       thHtml += '</tr>'; tdHtml += '</tr>';
       document.getElementById('modCabeceras').innerHTML = thHtml;
       document.getElementById('modValores').innerHTML = tdHtml;
-
       let art = dbStockOriginal.find(f => String(f['Código']).trim() === String(codigoModalActual).trim());
       const strProm = art ? (art['ConsPromMens'] || art['ConsProm Mens'] || art['ConsProm'] || '') : '';
       
@@ -1107,7 +1060,6 @@
       if (elPromBadgeVal) {
         elPromBadgeVal.textContent = valorPromedio.toLocaleString('es-PE', { maximumFractionDigits: 1 });
       }
-
       actualizarGrafico(etiquetas, valores, valorPromedio);
     }
 
@@ -1121,10 +1073,8 @@
       const promedio = (typeof valorPromedio === 'number' && !isNaN(valorPromedio)) ? valorPromedio : 0;
       const promedioData = Array(valores.length).fill(promedio);
       const strValorProm = promedio.toLocaleString('es-PE', { maximumFractionDigits: 1 });
-
       const maxVal = valores.length > 0 ? Math.max(...valores, promedio) : promedio;
       const limiteSugerido = maxVal > 0 ? (maxVal * 1.25) : 10;
-
       chartInstancia = new Chart(ctx, {
         type: 'line', 
         data: { 
@@ -1164,21 +1114,11 @@
         options: { 
           responsive: true, 
           maintainAspectRatio: false, 
-          interaction: {
-            mode: 'index',
-            intersect: false
-          },
+          interaction: { mode: 'index', intersect: false },
           plugins: { 
             legend: { 
-              display: true,
-              position: 'top',
-              align: 'end',
-              labels: {
-                boxWidth: 12,
-                usePointStyle: true,
-                color: isDark ? '#e2e8f0' : '#334155',
-                font: { size: 10, weight: '600' }
-              }
+              display: true, position: 'top', align: 'end',
+              labels: { boxWidth: 12, usePointStyle: true, color: isDark ? '#e2e8f0' : '#334155', font: { size: 10, weight: '600' } }
             },
             tooltip: {
               callbacks: {
@@ -1189,20 +1129,14 @@
             }
           }, 
           scales: { 
-            x: { 
-              grid: { display: false }, 
-              ticks: { color: isDark ? '#94a3b8' : '#64748b', font: { size: 10, weight: '500' } } 
-            }, 
+            x: { grid: { display: false }, ticks: { color: isDark ? '#94a3b8' : '#64748b', font: { size: 10, weight: '500' } } }, 
             y: { 
               beginAtZero: true, 
               suggestedMax: limiteSugerido,
               grid: { color: isDark ? 'rgba(51, 65, 85, 0.4)' : 'rgba(226, 232, 240, 0.8)' }, 
               ticks: { 
-                color: isDark ? '#94a3b8' : '#64748b', 
-                font: { size: 10 },
-                callback: function(val) {
-                  return Number(val).toLocaleString('es-PE');
-                }
+                color: isDark ? '#94a3b8' : '#64748b', font: { size: 10 },
+                callback: function(val) { return Number(val).toLocaleString('es-PE'); }
               } 
             } 
           } 
@@ -1242,7 +1176,6 @@
       </tr>`;
       const theadEl = document.getElementById('modFarmThead') || document.querySelector('#modalFarmacias thead');
       if (theadEl) { theadEl.innerHTML = theadHtml; }
-
       const areas = ["FCEXT", "FDU", "FUCI", "FCQX", "FEME", "FMES"];
       let tbodyHtml = '';
       let datasets = areas.map(a => ({ label: a, data: [], backgroundColor: getAreaColor(a, false), borderRadius: 3 }));
@@ -1251,14 +1184,12 @@
       let totalesPorMes = new Array(numMeses).fill(0);
       let granTotalGeneral = 0;
       let sumaPromediosFarmacias = 0;
-
       if (numMeses === 0) {
         tbodyHtml = `<tr><td colspan="9" class="py-6 text-center text-slate-400">No hay datos registrados para este artículo.</td></tr>`;
       } else {
         areas.forEach((area, i) => {
           let sumaArea = 0;
           let rowHtml = `<tr><td class="px-2.5 py-2 text-left font-bold" style="color:${getAreaColor(area, true)}">${area}</td>`;
-          
           mesesDisponibles.forEach((mes, mIdx) => {
             let datosMes = historial[mes] || {};
             let val = parsearNumero(datosMes[area] || 0);
@@ -1267,38 +1198,29 @@
             datasets[i].data.push(val);
             rowHtml += `<td class="px-2.5 py-2 font-mono-num">${val > 0 ? val.toLocaleString('en-US') : '-'}</td>`;
           });
-          
           let promArea = numMeses > 0 ? Math.round(sumaArea / numMeses) : 0;
           sumaPromediosFarmacias += promArea;
           granTotalGeneral += sumaArea;
-
           rowHtml += `<td class="px-2.5 py-2 font-bold text-amber-800 dark:text-amber-300 bg-amber-50/80 dark:bg-amber-950/30 border-l border-amber-200/80 dark:border-amber-900/50 font-mono-num">${promArea.toLocaleString('en-US')}</td>`;
           rowHtml += `<td class="px-2.5 py-2 font-black text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-900/30 border-l border-slate-200 dark:border-slate-700 font-mono-num">${sumaArea.toLocaleString('en-US')}</td></tr>`;
           tbodyHtml += rowHtml;
         });
-
-        // FILA DE PROMEDIO
         let filaPromedioMes = `<tr class="bg-amber-50/90 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200 font-bold border-t-2 border-amber-200 dark:border-amber-900/60">
           <td class="px-2.5 py-2.5 text-left uppercase text-amber-950 dark:text-amber-100 font-extrabold">PROMEDIO</td>`;
-        
         totalesPorMes.forEach(totMes => {
           let promMesServicios = areas.length > 0 ? Math.round(totMes / areas.length) : 0;
           filaPromedioMes += `<td class="px-2.5 py-2.5 font-mono-num text-amber-900 dark:text-amber-300">${promMesServicios > 0 ? promMesServicios.toLocaleString('en-US') : '-'}</td>`;
         });
-
         let promTotalMensualGlobal = numMeses > 0 ? Math.round(granTotalGeneral / numMeses) : 0;
         filaPromedioMes += `<td class="px-2.5 py-2.5 text-amber-950 dark:text-amber-200 bg-amber-100/90 dark:bg-amber-900/60 border-l border-amber-200 dark:border-amber-800 font-mono-num font-black">${promTotalMensualGlobal.toLocaleString('en-US')}</td>`;
         filaPromedioMes += `<td class="px-2.5 py-2.5 text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-900/60 border-l border-slate-200 dark:border-slate-700 font-mono-num text-[10px]">—</td></tr>`;
         tbodyHtml += filaPromedioMes;
 
-        // FILA DE TOTAL
         let filaTotalMes = `<tr class="bg-slate-100/90 dark:bg-slate-800/90 font-black border-t border-slate-200 dark:border-slate-700">
           <td class="px-2.5 py-2.5 text-left text-slate-900 dark:text-white uppercase">TOTAL</td>`;
-        
         totalesPorMes.forEach(totMes => {
           filaTotalMes += `<td class="px-2.5 py-2.5 font-mono-num text-slate-900 dark:text-white">${totMes > 0 ? totMes.toLocaleString('en-US') : '-'}</td>`;
         });
-        
         filaTotalMes += `<td class="px-2.5 py-2.5 text-amber-950 dark:text-amber-200 bg-amber-100/70 dark:bg-amber-950/70 border-l border-amber-200 dark:border-amber-900/50 font-mono-num font-black">${promTotalMensualGlobal.toLocaleString('en-US')}</td>`;
         filaTotalMes += `<td class="px-2.5 py-2.5 text-teal-900 dark:text-teal-200 bg-teal-100 dark:bg-teal-950 border-l border-slate-200 dark:border-slate-700 font-mono-num font-black">${granTotalGeneral.toLocaleString('en-US')}</td></tr>`;
         tbodyHtml += filaTotalMes;
@@ -1341,7 +1263,7 @@
     function cerrarModalFarmacias() { document.getElementById('modalFarmacias').classList.add('hidden'); }
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { cerrarModal(); cerrarModalFarmacias(); } });
   </script>
-</body>
-</html>
 
 
+
+</body></html>
