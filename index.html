@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>STOCK DIGITAL HOSPITAL HAS</title>
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; font-family: system-ui, -apple-system, sans-serif; background-color: #f8fafc; }
+    iframe { width: 100%; height: 100%; border: none; display: none; }
+    
+    /* Diseño de la pantalla de bloqueo */
+    #pantalla-bloqueo { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; padding: 20px; text-align: center; }
+    .card { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); max-width: 320px; width: 100%; border: 1px solid #e2e8f0; }
+    .icono { background: #0284c7; color: white; width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; font-size: 24px; font-weight: bold; }
+    h2 { margin: 0 0 5px 0; color: #0f172a; font-size: 18px; }
+    p { margin: 0 0 20px 0; color: #64748b; font-size: 13px; }
+    input { width: 100%; box-sizing: border-box; padding: 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; margin-bottom: 15px; text-align: center; font-size: 16px; letter-spacing: 2px; }
+    button { width: 100%; background: #0284c7; color: white; border: none; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; transition: 0.2s; }
+    button:active { background: #0369a1; }
+    #error { color: #e11d48; font-size: 12px; margin-top: 10px; display: none; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <!-- PANTALLA DE CONTRASEÑA -->
+  <div id="pantalla-bloqueo">
+    <div class="card">
+      <div class="icono">HES</div>
+      <h2>Control de Acceso</h2>
+      <p>Farmacología y Central de Abastecimiento</p>
+      <!-- CONTRASEÑA ACTUAL: hes2026 -->
+      <input type="password" id="clave" placeholder="Ingresa el PIN" onkeypress="if(event.key === 'Enter') verificar()">
+      <button onclick="verificar()">Acceder al Sistema</button>
+      <div id="error">PIN incorrecto. Intenta de nuevo.</div>
+    </div>
+  </div>
+
+  <!-- TU SISTEMA ORIGINAL INVISIBLE HASTA PONER LA CLAVE -->
+  <!-- REEMPLAZA EL ENLACE DE ABAJO POR TU ENLACE LARGO DE APPS SCRIPT -->
+  <iframe id="miApp" src="https://script.google.com/macros/s/AKfycbxhCztK0lu3_pNN_rpYiW-bFxCEAulGGht5YAz1SW49ESEZR8jL7EEI4f4uBogK6tGseA/exec"></iframe>
+
+  <script>
+    function verificar() {
+      var pass = document.getElementById('clave').value;
+      // AQUÍ DEFINES LA CONTRASEÑA PARA TUS COLEGAS (Ejemplo: hes2026)
+      if(pass === "hes2026") {
+        document.getElementById('pantalla-bloqueo').style.display = 'none';
+        document.getElementById('miApp').style.display = 'block';
+      } else {
+        document.getElementById('error').style.display = 'block';
+        document.getElementById('clave').value = '';
+      }
+    }
+  </script>
+</body>
+</html>
