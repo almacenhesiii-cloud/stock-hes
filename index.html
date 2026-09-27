@@ -581,41 +581,21 @@
       }
     }
 
-    function recargarDatos() {
-      // Conexión real comentada
-      /*
-      const API_URL = "https://script.google.com/macros/s/AKfycbxhCztK0lu3_pNN_rpYiW-bFxCEAulGGht5YAz1SW49ESEZR8jL7EEI4f4uBogK6tGseA/exec";
-      fetch(API_URL)
-        .then(response => response.json())
-        .then(datos => { inicializarApp(datos); });
-      */
-      setTimeout(() => {
-        inicializarApp({
-          stock: [
-            { 
-              "Código": "00102", 
-              "Artículo": "JERINGA DESCARTABLE 10ML CON AGUJA 21G X 1 1/2 CAJA X 100", 
-              "AlmHES": "12,450", 
-              "ConsPromMens": "3,200", 
-              "StockHAS": "14,330", 
-              "StockFarmHAS": "1,880",
-              "FCEXT": "450", "FDU": "620", "FUCI": "180", "FCQX": "120", "FEME": "890", "FMES": "310"
-            },
-            { 
-              "Código": "00245", 
-              "Artículo": "PARACETAMOL 500 MG TABLETA RECUBIERTA ACCIÓN RÁPIDA", 
-              "AlmHES": "4,800", 
-              "ConsPromMens": "1,150", 
-              "StockHAS": "5,970", 
-              "StockFarmHAS": "1,170",
-              "FCEXT": "320", "FDU": "210", "FUCI": "90", "FCQX": "65", "FEME": "410", "FMES": "150"
-            }
-          ],
-          consumo: {},
-          consPorAlm: {}
-        });
-      }, 100);
-    }
+function recargarDatos() {
+  document.getElementById('loading').classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+  
+  const API_URL = "https://script.google.com/macros/s/AKfycbxhCztK0lu3_pNN_rpYiW-bFxCEAulGGht5YAz1SW49ESEZR8jL7EEI4f4uBogK6tGseA/exec";
+  
+  fetch(API_URL)
+    .then(response => response.json())
+    .then(datos => {
+      inicializarApp(datos);
+    })
+    .catch(error => {
+      console.error("Error de conexión:", error);
+      document.getElementById('loading').innerHTML = "<div class='text-rose-500 font-bold'>Error conectando al servidor. Revisa tu conexión.</div>";
+    });
+}
 
     function obtenerNombreCorto(nombreOriginal) {
       let nombreL = String(nombreOriginal).toLowerCase();
