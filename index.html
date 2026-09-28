@@ -88,7 +88,7 @@
 <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-sky-600">
 <span class="material-symbols-outlined text-[20px]">pin</span>
 </div>
-<!-- CONTRASEÑA ACTUAL: hes2026 -->
+<!-- CONTRASEÑA ACTUAL: 1234 -->
 <input autocomplete="current-password" class="w-full pl-10 pr-4 py-3 bg-slate-50/80 border-2 border-slate-200 rounded-xl text-center text-lg sm:text-xl font-mono tracking-[0.35em] text-slate-800 placeholder:text-slate-300 placeholder:tracking-widest focus:ring-4 focus:ring-sky-400/20 focus:border-sky-500 focus:bg-white transition-all outline-none" id="clave" onkeypress="if(event.key === 'Enter') verificarPIN()" placeholder="••••••••" type="password">
 </div>
 <button class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 active:scale-[0.98] text-white font-bold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-sky-500/25 transition-all cursor-pointer" onclick="verificarPIN()">
@@ -275,7 +275,7 @@
 <polyline points="10,50 30,50 40,20 60,80 70,50 90,50"></polyline>
 </svg>
 <div class="text-sky-700 dark:text-sky-400 text-xs font-bold tracking-wider uppercase">Procesando Matriz Farmacológica...</div>
-<span class="text-[11px] text-slate-400 dark:text-slate-500 mt-1">Conectando en directo con Google Sheets</span>
+<span class="text-[11px] text-slate-400 dark:text-slate-500 mt-1">Conectando ...</span>
 </div>
 <!-- 3. TABLA CON CABECERAS FIJAS (STICKY HEADERS) Y DESCRIPCIONES AMPLIADAS -->
 <div class="custom-scrollbar flex-1 overflow-x-auto overflow-y-auto w-full max-w-full" id="contenedorTabla">
@@ -560,7 +560,7 @@
 
     function verificarPIN() {
       const inputClave = document.getElementById('clave');
-      if (inputClave && inputClave.value === "hes2026") {
+      if (inputClave && inputClave.value === "1234") {
         document.getElementById('pantalla-bloqueo').style.display = 'none';
         const appPrincipal = document.getElementById('app-principal');
         appPrincipal.classList.remove('hidden');
@@ -685,7 +685,7 @@
       document.getElementById('loading').classList.add('opacity-0', 'pointer-events-none');
       setTimeout(() => document.getElementById('loading').classList.add('hidden'), 250);
       const horaActual = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      document.getElementById('syncText').textContent = datos && datos.actualizado ? `Actualizado: ${datos.actualizado}` : `En tiempo real: Hoy a las ${horaActual}`;
+      document.getElementById('syncText').textContent = datos && datos.actualizado ? `${datos.actualizado}` : `En tiempo real: Hoy a las ${horaActual}`;
       
       dbStockOriginal = (datos && datos.stock) ? datos.stock : MOCK_STOCK;
       dbStockFiltrado = [...dbStockOriginal];
